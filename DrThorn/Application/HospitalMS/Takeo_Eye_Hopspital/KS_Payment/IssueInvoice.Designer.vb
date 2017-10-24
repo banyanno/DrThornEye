@@ -37,13 +37,11 @@ Partial Class IssueInvoice
         Me.CheckBox3 = New System.Windows.Forms.CheckBox
         Me.Label6 = New System.Windows.Forms.Label
         Me.CheckBox1 = New System.Windows.Forms.CheckBox
-        Me.TxtPatientNameKh = New System.Windows.Forms.TextBox
         Me.TxtPaintNameEng = New System.Windows.Forms.TextBox
         Me.TxtPaitneNo = New System.Windows.Forms.TextBox
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label17 = New System.Windows.Forms.Label
         Me.Label20 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.TextBox14 = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
@@ -52,6 +50,8 @@ Partial Class IssueInvoice
         Me.Label16 = New System.Windows.Forms.Label
         Me.TextBox16 = New System.Windows.Forms.TextBox
         Me.CheckBox2 = New System.Windows.Forms.CheckBox
+        Me.TxtPatientNameKh = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
         Me.Label10 = New System.Windows.Forms.Label
         Me.TxtMedicineFee = New System.Windows.Forms.TextBox
         Me.Label8 = New System.Windows.Forms.Label
@@ -260,16 +260,6 @@ Partial Class IssueInvoice
         Me.CheckBox1.UseVisualStyleBackColor = True
         Me.CheckBox1.Visible = False
         '
-        'TxtPatientNameKh
-        '
-        Me.TxtPatientNameKh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtPatientNameKh.Font = New System.Drawing.Font("Kh Battambang", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPatientNameKh.Location = New System.Drawing.Point(132, 204)
-        Me.TxtPatientNameKh.Name = "TxtPatientNameKh"
-        Me.TxtPatientNameKh.Size = New System.Drawing.Size(220, 37)
-        Me.TxtPatientNameKh.TabIndex = 2
-        Me.TxtPatientNameKh.Visible = False
-        '
         'TxtPaintNameEng
         '
         Me.TxtPaintNameEng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -318,16 +308,6 @@ Partial Class IssueInvoice
         Me.Label20.TabIndex = 22
         Me.Label20.Text = "Total Discount"
         Me.Label20.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(27, 212)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 20)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Kh Name:"
-        Me.Label3.Visible = False
         '
         'Label2
         '
@@ -407,6 +387,26 @@ Partial Class IssueInvoice
         Me.CheckBox2.Text = "Dis-For Operation"
         Me.CheckBox2.UseVisualStyleBackColor = True
         Me.CheckBox2.Visible = False
+        '
+        'TxtPatientNameKh
+        '
+        Me.TxtPatientNameKh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtPatientNameKh.Font = New System.Drawing.Font("Kh Battambang", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPatientNameKh.Location = New System.Drawing.Point(132, 204)
+        Me.TxtPatientNameKh.Name = "TxtPatientNameKh"
+        Me.TxtPatientNameKh.Size = New System.Drawing.Size(220, 37)
+        Me.TxtPatientNameKh.TabIndex = 2
+        Me.TxtPatientNameKh.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(27, 212)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 20)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Kh Name:"
+        Me.Label3.Visible = False
         '
         'Label10
         '
@@ -825,12 +825,11 @@ Partial Class IssueInvoice
         '
         'BtnSave
         '
-        Me.BtnSave.BackgroundImage = CType(resources.GetObject("BtnSave.BackgroundImage"), System.Drawing.Image)
         Me.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnSave.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnSave.Font = New System.Drawing.Font("Kh Battambang", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSave.ForeColor = System.Drawing.Color.White
+        Me.BtnSave.ForeColor = System.Drawing.Color.Blue
         Me.BtnSave.Location = New System.Drawing.Point(525, 496)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(94, 38)
@@ -840,12 +839,11 @@ Partial Class IssueInvoice
         '
         'btnCancel
         '
-        Me.btnCancel.BackgroundImage = CType(resources.GetObject("btnCancel.BackgroundImage"), System.Drawing.Image)
         Me.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Kh Battambang", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.ForeColor = System.Drawing.Color.White
+        Me.btnCancel.ForeColor = System.Drawing.Color.Blue
         Me.btnCancel.Location = New System.Drawing.Point(625, 496)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(94, 38)

@@ -23,8 +23,8 @@ Partial Class DashboardPayment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardPayment))
         Dim GridPatientWaiting_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardPayment))
         Dim GridConsultFee_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout
         Dim GridPrescription_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
@@ -116,96 +116,91 @@ Partial Class DashboardPayment
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(35, 35)
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(25, 25)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnIssureInvoice, Me.ToolStripSeparator1, Me.BtnRefreshWaiting, Me.ToolStripSeparator2, Me.BtnSetExchangeRate, Me.ToolStripSeparator3, Me.BtnCustomerOutsite, Me.ToolStripSeparator7, Me.BtnPrescription, Me.ToolStripSeparator6, Me.BtnPrintCard, Me.ToolStripSeparator8, Me.BtnDeleteIssueInvoice})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1461, 57)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1461, 62)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'BtnIssureInvoice
         '
-        Me.BtnIssureInvoice.BackgroundImage = CType(resources.GetObject("BtnIssureInvoice.BackgroundImage"), System.Drawing.Image)
         Me.BtnIssureInvoice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnIssureInvoice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnIssureInvoice.ForeColor = System.Drawing.Color.White
+        Me.BtnIssureInvoice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIssureInvoice.ForeColor = System.Drawing.Color.Blue
         Me.BtnIssureInvoice.Image = Global.HospitalMS.My.Resources.Resources.register
         Me.BtnIssureInvoice.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnIssureInvoice.Name = "BtnIssureInvoice"
-        Me.BtnIssureInvoice.Size = New System.Drawing.Size(142, 54)
+        Me.BtnIssureInvoice.Size = New System.Drawing.Size(154, 59)
         Me.BtnIssureInvoice.Text = "      Issue Invoice      "
         Me.BtnIssureInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 62)
         '
         'BtnRefreshWaiting
         '
-        Me.BtnRefreshWaiting.BackgroundImage = CType(resources.GetObject("BtnRefreshWaiting.BackgroundImage"), System.Drawing.Image)
         Me.BtnRefreshWaiting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnRefreshWaiting.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRefreshWaiting.ForeColor = System.Drawing.Color.White
+        Me.BtnRefreshWaiting.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRefreshWaiting.ForeColor = System.Drawing.Color.Blue
         Me.BtnRefreshWaiting.Image = Global.HospitalMS.My.Resources.Resources.refresh
         Me.BtnRefreshWaiting.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnRefreshWaiting.Name = "BtnRefreshWaiting"
-        Me.BtnRefreshWaiting.Size = New System.Drawing.Size(165, 54)
+        Me.BtnRefreshWaiting.Size = New System.Drawing.Size(183, 59)
         Me.BtnRefreshWaiting.Text = "   Ref-Waiting Payment  "
         Me.BtnRefreshWaiting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 62)
         '
         'BtnSetExchangeRate
         '
-        Me.BtnSetExchangeRate.BackgroundImage = CType(resources.GetObject("BtnSetExchangeRate.BackgroundImage"), System.Drawing.Image)
         Me.BtnSetExchangeRate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnSetExchangeRate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSetExchangeRate.ForeColor = System.Drawing.Color.White
+        Me.BtnSetExchangeRate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSetExchangeRate.ForeColor = System.Drawing.Color.Blue
         Me.BtnSetExchangeRate.Image = Global.HospitalMS.My.Resources.Resources.Receipt_oop
         Me.BtnSetExchangeRate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnSetExchangeRate.Name = "BtnSetExchangeRate"
-        Me.BtnSetExchangeRate.Size = New System.Drawing.Size(157, 54)
+        Me.BtnSetExchangeRate.Size = New System.Drawing.Size(176, 59)
         Me.BtnSetExchangeRate.Text = "   Set Exchange Rate   "
         Me.BtnSetExchangeRate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 62)
         '
         'BtnCustomerOutsite
         '
-        Me.BtnCustomerOutsite.BackgroundImage = CType(resources.GetObject("BtnCustomerOutsite.BackgroundImage"), System.Drawing.Image)
         Me.BtnCustomerOutsite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCustomerOutsite.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCustomerOutsite.ForeColor = System.Drawing.Color.White
+        Me.BtnCustomerOutsite.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCustomerOutsite.ForeColor = System.Drawing.Color.Blue
         Me.BtnCustomerOutsite.Image = Global.HospitalMS.My.Resources.Resources.PatientImage
         Me.BtnCustomerOutsite.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnCustomerOutsite.Name = "BtnCustomerOutsite"
-        Me.BtnCustomerOutsite.Size = New System.Drawing.Size(160, 54)
+        Me.BtnCustomerOutsite.Size = New System.Drawing.Size(173, 59)
         Me.BtnCustomerOutsite.Text = "        New Customer      "
         Me.BtnCustomerOutsite.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 62)
         '
         'BtnPrescription
         '
-        Me.BtnPrescription.BackgroundImage = Global.HospitalMS.My.Resources.Resources.mZihS
         Me.BtnPrescription.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnPrescription.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.BtnPrescription.ForeColor = System.Drawing.Color.White
+        Me.BtnPrescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPrescription.ForeColor = System.Drawing.Color.Blue
         Me.BtnPrescription.Image = Global.HospitalMS.My.Resources.Resources.printer
         Me.BtnPrescription.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnPrescription.Name = "BtnPrescription"
-        Me.BtnPrescription.Size = New System.Drawing.Size(138, 54)
+        Me.BtnPrescription.Size = New System.Drawing.Size(172, 59)
         Me.BtnPrescription.Text = "     Print Prescription     "
         Me.BtnPrescription.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -213,43 +208,41 @@ Partial Class DashboardPayment
         '
         Me.ToolStripSeparator6.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 62)
         '
         'BtnPrintCard
         '
-        Me.BtnPrintCard.BackgroundImage = CType(resources.GetObject("BtnPrintCard.BackgroundImage"), System.Drawing.Image)
         Me.BtnPrintCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnPrintCard.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPrintCard.ForeColor = System.Drawing.Color.White
+        Me.BtnPrintCard.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPrintCard.ForeColor = System.Drawing.Color.Blue
         Me.BtnPrintCard.Image = Global.HospitalMS.My.Resources.Resources._1422017622_Terms_rev_512
         Me.BtnPrintCard.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnPrintCard.Name = "BtnPrintCard"
-        Me.BtnPrintCard.Size = New System.Drawing.Size(153, 54)
+        Me.BtnPrintCard.Size = New System.Drawing.Size(160, 59)
         Me.BtnPrintCard.Text = "          Print Label        "
         Me.BtnPrintCard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 62)
         '
         'BtnDeleteIssueInvoice
         '
-        Me.BtnDeleteIssueInvoice.BackgroundImage = CType(resources.GetObject("BtnDeleteIssueInvoice.BackgroundImage"), System.Drawing.Image)
         Me.BtnDeleteIssueInvoice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDeleteIssueInvoice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDeleteIssueInvoice.ForeColor = System.Drawing.Color.White
+        Me.BtnDeleteIssueInvoice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDeleteIssueInvoice.ForeColor = System.Drawing.Color.Blue
         Me.BtnDeleteIssueInvoice.Image = Global.HospitalMS.My.Resources.Resources.delete_appointment
         Me.BtnDeleteIssueInvoice.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnDeleteIssueInvoice.Name = "BtnDeleteIssueInvoice"
-        Me.BtnDeleteIssueInvoice.Size = New System.Drawing.Size(164, 54)
+        Me.BtnDeleteIssueInvoice.Size = New System.Drawing.Size(181, 59)
         Me.BtnDeleteIssueInvoice.Text = "   Delete Issue Invoice   "
         Me.BtnDeleteIssueInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 57)
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 62)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -260,8 +253,8 @@ Partial Class DashboardPayment
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1461, 667)
-        Me.SplitContainer1.SplitterDistance = 313
+        Me.SplitContainer1.Size = New System.Drawing.Size(1461, 662)
+        Me.SplitContainer1.SplitterDistance = 310
         Me.SplitContainer1.TabIndex = 1
         '
         'GroupBox3
@@ -272,7 +265,7 @@ Partial Class DashboardPayment
         Me.GroupBox3.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox3.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1461, 313)
+        Me.GroupBox3.Size = New System.Drawing.Size(1461, 310)
         Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ចំនួនអ្នកជំងឺរងចាំបង់ប្រាក់"
@@ -292,7 +285,7 @@ Partial Class DashboardPayment
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.GroupBox2)
         Me.SplitContainer3.Panel2.Controls.Add(Me.GroupBox9)
-        Me.SplitContainer3.Size = New System.Drawing.Size(1455, 277)
+        Me.SplitContainer3.Size = New System.Drawing.Size(1455, 274)
         Me.SplitContainer3.SplitterDistance = 1009
         Me.SplitContainer3.TabIndex = 7
         '
@@ -317,7 +310,7 @@ Partial Class DashboardPayment
         Me.GridPatientWaiting.Location = New System.Drawing.Point(0, 0)
         Me.GridPatientWaiting.Name = "GridPatientWaiting"
         Me.GridPatientWaiting.RecordNavigator = True
-        Me.GridPatientWaiting.Size = New System.Drawing.Size(1007, 275)
+        Me.GridPatientWaiting.Size = New System.Drawing.Size(1007, 272)
         Me.GridPatientWaiting.TabIndex = 6
         Me.GridPatientWaiting.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
         '
@@ -342,7 +335,7 @@ Partial Class DashboardPayment
         Me.GroupBox2.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox2.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(440, 275)
+        Me.GroupBox2.Size = New System.Drawing.Size(440, 272)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Receipt info $"
@@ -537,7 +530,7 @@ Partial Class DashboardPayment
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.UiTab2)
-        Me.SplitContainer2.Size = New System.Drawing.Size(1461, 350)
+        Me.SplitContainer2.Size = New System.Drawing.Size(1461, 348)
         Me.SplitContainer2.SplitterDistance = 615
         Me.SplitContainer2.TabIndex = 0
         '
@@ -547,7 +540,7 @@ Partial Class DashboardPayment
         Me.UiTab1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UiTab1.Location = New System.Drawing.Point(0, 0)
         Me.UiTab1.Name = "UiTab1"
-        Me.UiTab1.Size = New System.Drawing.Size(613, 348)
+        Me.UiTab1.Size = New System.Drawing.Size(613, 346)
         Me.UiTab1.TabIndex = 0
         Me.UiTab1.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.UiTabPage1})
         '
@@ -556,7 +549,7 @@ Partial Class DashboardPayment
         Me.UiTabPage1.Controls.Add(Me.GridConsultFee)
         Me.UiTabPage1.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage1.Name = "UiTabPage1"
-        Me.UiTabPage1.Size = New System.Drawing.Size(609, 317)
+        Me.UiTabPage1.Size = New System.Drawing.Size(609, 315)
         Me.UiTabPage1.TabStop = True
         Me.UiTabPage1.Text = "Hospital Service"
         '
@@ -577,7 +570,7 @@ Partial Class DashboardPayment
         Me.GridConsultFee.Location = New System.Drawing.Point(0, 0)
         Me.GridConsultFee.Name = "GridConsultFee"
         Me.GridConsultFee.RecordNavigator = True
-        Me.GridConsultFee.Size = New System.Drawing.Size(609, 317)
+        Me.GridConsultFee.Size = New System.Drawing.Size(609, 315)
         Me.GridConsultFee.TabIndex = 0
         Me.GridConsultFee.TotalRow = Janus.Windows.GridEX.InheritableBoolean.[True]
         Me.GridConsultFee.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
@@ -655,7 +648,7 @@ Partial Class DashboardPayment
         Me.UiTab2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UiTab2.Location = New System.Drawing.Point(0, 0)
         Me.UiTab2.Name = "UiTab2"
-        Me.UiTab2.Size = New System.Drawing.Size(840, 348)
+        Me.UiTab2.Size = New System.Drawing.Size(840, 346)
         Me.UiTab2.TabIndex = 1
         Me.UiTab2.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.UiTabPage2})
         '
@@ -664,7 +657,7 @@ Partial Class DashboardPayment
         Me.UiTabPage2.Controls.Add(Me.GridPrescription)
         Me.UiTabPage2.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage2.Name = "UiTabPage2"
-        Me.UiTabPage2.Size = New System.Drawing.Size(836, 317)
+        Me.UiTabPage2.Size = New System.Drawing.Size(836, 315)
         Me.UiTabPage2.TabStop = True
         Me.UiTabPage2.Text = "Sale Medicine"
         '
@@ -683,7 +676,7 @@ Partial Class DashboardPayment
         Me.GridPrescription.Location = New System.Drawing.Point(0, 0)
         Me.GridPrescription.Name = "GridPrescription"
         Me.GridPrescription.RecordNavigator = True
-        Me.GridPrescription.Size = New System.Drawing.Size(836, 317)
+        Me.GridPrescription.Size = New System.Drawing.Size(836, 315)
         Me.GridPrescription.TabIndex = 1
         Me.GridPrescription.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
         '

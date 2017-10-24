@@ -82,8 +82,8 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=NBC120\sql2008;Failover Partner=192.168.111.252\sql2;Initial Catalog="& _ 
-            "NgyMengDB;Persist Security Info=True;User ID=sa;Password=P@ssw0rd;Max Pool Size="& _ 
-            "4000;Asynchronous Processing=True;Connect Timeout=1000;Packet Size=2768")>  _
+            "DRThorn;Persist Security Info=True;User ID=sa;Password=P@ssw0rd;Max Pool Size=40"& _ 
+            "00;Asynchronous Processing=True;Connect Timeout=1000;Packet Size=2768")>  _
         Public ReadOnly Property TakeoDBConnectionString() As String
             Get
                 Return CType(Me("TakeoDBConnectionString"),String)

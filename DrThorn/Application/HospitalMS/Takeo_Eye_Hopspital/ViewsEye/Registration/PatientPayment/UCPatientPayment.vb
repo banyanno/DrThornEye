@@ -1359,7 +1359,7 @@ Public Class UCPatientPayment
         If ValidateTextField(TxtAgePatient, "Age", ErrPatient) = False Then Exit Sub
         If ValidateCombobox(CboSexPatien, "Sex", ErrPatient) = False Then Exit Sub
         If ValidateCombobox(CboProNo, "Province", ErrPatient) = False Then Exit Sub
-       
+
         If lblSaveOption.Text = "0" Then
             ModGlobleVariable.DIALOG_SAVE = MessageBox.Show(ModGlobleVariable.MSG_SAVE, "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If ModGlobleVariable.DIALOG_SAVE = Windows.Forms.DialogResult.Yes Then
@@ -1465,7 +1465,7 @@ Public Class UCPatientPayment
         End If
     End Function
     Private Sub BtnPrintCard_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPrintCard.Click
-     
+
         If GridPatientInformation.SelectedItems.Count = 0 Then
             MessageBox.Show("Please select patient information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
@@ -1498,9 +1498,9 @@ Public Class UCPatientPayment
                 MessageBox.Show(ex.Message, "Error Printer", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
-      
 
-        
+
+
     End Sub
 
     Private Sub TxtSearchTel_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TxtSearchTel.KeyUp
@@ -1579,5 +1579,9 @@ Public Class UCPatientPayment
         '        MessageBox.Show("Sucessfully sent to waiting list.", "Send", MessageBoxButtons.OK, MessageBoxIcon.Information)
         '    End If
         'End If
+    End Sub
+
+    Private Sub GroupPatientFee_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupPatientFee.Enter
+
     End Sub
 End Class
