@@ -1,0 +1,124 @@
+USE [NgyMengDB]
+GO
+
+/****** Object:  Table [dbo].[S_LABORATE_CONSULT]    Script Date: 10/04/2017 23:49:13 ******/
+S_DOCTOR_CONSULT(WAITING_ID)
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[S_LABORATE_CONSULT](
+	[CON_LABO_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[CONSULT_ID] [numeric](18, 0) NULL,
+	[LABORATE] [nvarchar](50) NULL,
+	[LABORATE_PRICE] [numeric](18, 2) NULL,
+ CONSTRAINT [PK_S_LABORATE_CONSULT] PRIMARY KEY CLUSTERED 
+(
+	[CON_LABO_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+===================================================
+
+USE [NgyMengDB]
+GO
+
+/****** Object:  Table [dbo].[S_LASER_CONSULT]    Script Date: 10/04/2017 23:49:32 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[S_LASER_CONSULT](
+	[LACONSULT_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[CONSULT_ID] [numeric](18, 0) NULL,
+	[LASER_NAME] [nvarchar](50) NULL,
+	[LASER_PRICE] [numeric](18, 2) NULL,
+ CONSTRAINT [PK_S_LASER_CONSULT] PRIMARY KEY CLUSTERED 
+(
+	[LACONSULT_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+========================================================
+
+USE [NgyMengDB]
+GO
+
+/****** Object:  Table [dbo].[S_INVESTIGATE_CONSULT]    Script Date: 10/04/2017 23:50:05 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[S_INVESTIGATE_CONSULT](
+	[CON_INVEST_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[CONSULT_ID] [numeric](18, 0) NULL,
+	[INVESTIGATE] [nvarchar](50) NULL,
+	[INVESTIGATEPRICE] [numeric](18, 2) NULL,
+ CONSTRAINT [PK_S_INVESTIGATE_CONSULT] PRIMARY KEY CLUSTERED 
+(
+	[CON_INVEST_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+===============================================================
+
+
+
+USE [NgyMengDB]
+GO
+
+/****** Object:  StoredProcedure [dbo].[UpdateWaitingDRConsult]    Script Date: 10/04/2017 23:51:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[UpdateWaitingDRConsult]
+as
+Declare @waitingNo numeric(18,0)
+Declare @PatientNo numeric(18,0)
+Declare @Date_waiting datetime
+
+--DECLARE authors_cursor CURSOR FOR SELECT PatientNo,CombindRefferal,dbo.fnFormatDate(CreateDate,'YYYY-MM-DD') FROM tblfollowup WHERE month(CreateDate)='2' and year(CreateDate)='2012'
+DECLARE authors_cursor CURSOR FOR  select WAIT_ID,patient_no,date_waiting from S_PATIENT_WAITING
+OPEN authors_cursor
+--FETCH NEXT FROM authors_cursor into @v
+WHILE @@FETCH_STATUS =0
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+SET NOCOUNT ON;
+--Select @v as PatientNo
+FETCH NEXT FROM authors_cursor into @waitingNo,@PatientNo,@Date_waiting
+
+
+update S_DOCTOR_CONSULT set waiting_id =@waitingNo where DR_CONSULT_DATE =@Date_waiting and PATIENT_NO=@PatientNo
+end
+CLOSE authors_cursor
+DEALLOCATE authors_cursor
+GO
+
