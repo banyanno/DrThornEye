@@ -281,13 +281,12 @@ Partial Class FormVA
         'BtnSave
         '
         Me.BtnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnSave.BackgroundImage = CType(resources.GetObject("BtnSave.BackgroundImage"), System.Drawing.Image)
         Me.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnSave.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSave.ForeColor = System.Drawing.Color.White
-        Me.BtnSave.Location = New System.Drawing.Point(400, 382)
+        Me.BtnSave.Location = New System.Drawing.Point(402, 370)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(169, 36)
         Me.BtnSave.TabIndex = 2
@@ -297,13 +296,12 @@ Partial Class FormVA
         'BtnCancel
         '
         Me.BtnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnCancel.BackgroundImage = CType(resources.GetObject("BtnCancel.BackgroundImage"), System.Drawing.Image)
         Me.BtnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancel.ForeColor = System.Drawing.Color.White
-        Me.BtnCancel.Location = New System.Drawing.Point(575, 382)
+        Me.BtnCancel.Location = New System.Drawing.Point(577, 370)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(117, 36)
         Me.BtnCancel.TabIndex = 3
@@ -326,7 +324,7 @@ Partial Class FormVA
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(704, 430)
+        Me.ClientSize = New System.Drawing.Size(704, 409)
         Me.Controls.Add(Me.LblWating)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.BtnSave)

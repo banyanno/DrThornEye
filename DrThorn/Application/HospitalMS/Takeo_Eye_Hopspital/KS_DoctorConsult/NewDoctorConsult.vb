@@ -694,7 +694,7 @@ Public Class NewDoctorConsult
     End Sub
     Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
         If ValidateCombobox(CboExamFee, "", ErrConsult) = False Then
-            UiTab1.SelectedIndex = 0
+
             Exit Sub
         End If
         If ChLaser.Checked = True Then

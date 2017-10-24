@@ -9,6 +9,7 @@ Public Class DashboardIncome
     Dim MainIncome As New DS_KSPAYMENT
     Dim DA_PrintInvoice As New DS_KSPAYMENTTableAdapters.S_INVOICE_KSR_VIEWTableAdapter
     Dim DA_MedicinePay As New DSConsultHistoryTableAdapters.S_PRESCRIPTIONA1TableAdapter
+    Dim DA_FollowUp As New DSWaitingConsultTableAdapters.S_PATIENT_FOLLOWUPTableAdapter
     Private Sub DashboardIncome_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ViewIncome(DateFrom.Value.Date, DateTo.Value.Date)
     End Sub
@@ -84,25 +85,28 @@ Public Class DashboardIncome
 
 
             '============== For Prescription ===========================
-            Dim ViewPrescrip As New CrpPrescription
+            Dim ViewPrescrip1 As New CrpPrescription
             Dim CrExportOptionsBig1 As ExportOptions
 
             Dim TblPrescription As DataTable = Prescription.SelectPrescriptionWaitingID(GridIncome.GetRow.Cells("WAITING_ID").Value)
-            ViewPrescrip.SetDataSource(TblPrescription)
+            Dim TblFollowUp As DataTable = DA_FollowUp.SelectPFollowupByWaitingID(GridIncome.GetRow.Cells("WAITING_ID").Value)
+            ViewPrescrip1.SetDataSource(TblPrescription)
+
+            ViewPrescrip1.Subreports("PatientFollowup").SetDataSource(TblFollowUp)
             Dim CrDiskFileDestinationOptionsBig1 As New DiskFileDestinationOptions()
             Dim CrFormatTypeOptionsBig1 As New PdfRtfWordFormatOptions()
-            CrDiskFileDestinationOptionsBig1.DiskFileName = My.Application.Info.DirectoryPath & "\Prescription.pdf"
-            CrExportOptionsBig1 = ViewPrescrip.ExportOptions
+            CrDiskFileDestinationOptionsBig1.DiskFileName = My.Application.Info.DirectoryPath & "\Prescription1.pdf"
+            CrExportOptionsBig1 = ViewPrescrip1.ExportOptions
             With CrExportOptionsBig1
                 .ExportDestinationType = ExportDestinationType.DiskFile
                 .ExportFormatType = ExportFormatType.PortableDocFormat
                 .DestinationOptions = CrDiskFileDestinationOptionsBig1
                 .FormatOptions = CrFormatTypeOptionsBig1
             End With
-            ViewPrescrip.Export()
+            ViewPrescrip1.Export()
             Application.DoEvents()
             Application.DoEvents()
-            VReport.AxAcroPDFPrescription.src = My.Application.Info.DirectoryPath & "\Prescription.pdf"
+            VReport.AxAcroPDFPrescription.src = My.Application.Info.DirectoryPath & "\Prescription1.pdf"
             VReport.AxAcroPDFPrescription.setZoom(100)
             VReport.ShowDialog()
         Catch ex As Exception

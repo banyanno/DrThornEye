@@ -216,8 +216,8 @@ Partial Class DashboardDoctorConsult
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.UiTab4)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1261, 1053)
-        Me.SplitContainer1.SplitterDistance = 527
+        Me.SplitContainer1.Size = New System.Drawing.Size(1261, 1058)
+        Me.SplitContainer1.SplitterDistance = 529
         Me.SplitContainer1.TabIndex = 0
         '
         'SplitContainer3
@@ -234,7 +234,7 @@ Partial Class DashboardDoctorConsult
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.GroupBox9)
-        Me.SplitContainer3.Size = New System.Drawing.Size(1261, 527)
+        Me.SplitContainer3.Size = New System.Drawing.Size(1261, 529)
         Me.SplitContainer3.SplitterDistance = 978
         Me.SplitContainer3.TabIndex = 8
         '
@@ -246,7 +246,7 @@ Partial Class DashboardDoctorConsult
         Me.GroupBox3.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox3.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(976, 525)
+        Me.GroupBox3.Size = New System.Drawing.Size(976, 527)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ចំនួនអ្នកជំងឺរងចាំ"
@@ -278,7 +278,7 @@ Partial Class DashboardDoctorConsult
         Me.GridPatientWaiting.SelectedInactiveFormatStyle.FontBold = Janus.Windows.GridEX.TriState.[True]
         Me.GridPatientWaiting.SelectedInactiveFormatStyle.FontSize = 12.0!
         Me.GridPatientWaiting.SelectedInactiveFormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.GridPatientWaiting.Size = New System.Drawing.Size(970, 489)
+        Me.GridPatientWaiting.Size = New System.Drawing.Size(970, 491)
         Me.GridPatientWaiting.TabIndex = 6
         Me.GridPatientWaiting.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
         '
@@ -290,7 +290,7 @@ Partial Class DashboardDoctorConsult
         Me.GroupBox9.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox9.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(277, 525)
+        Me.GroupBox9.Size = New System.Drawing.Size(277, 527)
         Me.GroupBox9.TabIndex = 1
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "រូបភាព"
@@ -301,7 +301,7 @@ Partial Class DashboardDoctorConsult
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Location = New System.Drawing.Point(3, 33)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(271, 489)
+        Me.PictureBox1.Size = New System.Drawing.Size(271, 491)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -311,7 +311,7 @@ Partial Class DashboardDoctorConsult
         Me.UiTab4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UiTab4.Location = New System.Drawing.Point(0, 0)
         Me.UiTab4.Name = "UiTab4"
-        Me.UiTab4.Size = New System.Drawing.Size(1259, 520)
+        Me.UiTab4.Size = New System.Drawing.Size(1259, 523)
         Me.UiTab4.TabIndex = 1
         Me.UiTab4.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.UiTabPage6, Me.UiTabPage9})
         Me.UiTab4.TabsStateStyles.FormatStyle.ForeColor = System.Drawing.Color.Red
@@ -325,7 +325,7 @@ Partial Class DashboardDoctorConsult
         Me.UiTabPage6.Controls.Add(Me.GroupBox1)
         Me.UiTabPage6.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage6.Name = "UiTabPage6"
-        Me.UiTabPage6.Size = New System.Drawing.Size(1257, 491)
+        Me.UiTabPage6.Size = New System.Drawing.Size(1257, 494)
         Me.UiTabPage6.TabStop = True
         Me.UiTabPage6.Text = "    New Visual Acuity    "
         '
@@ -339,7 +339,7 @@ Partial Class DashboardDoctorConsult
         Me.GroupBox1.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1257, 491)
+        Me.GroupBox1.Size = New System.Drawing.Size(1257, 494)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -666,8 +666,8 @@ Partial Class DashboardDoctorConsult
         '
         Me.SplitContainer2.Panel2.AutoScroll = True
         Me.SplitContainer2.Panel2.Controls.Add(Me.GroupBox5)
-        Me.SplitContainer2.Size = New System.Drawing.Size(1261, 1053)
-        Me.SplitContainer2.SplitterDistance = 257
+        Me.SplitContainer2.Size = New System.Drawing.Size(1261, 1058)
+        Me.SplitContainer2.SplitterDistance = 258
         Me.SplitContainer2.TabIndex = 0
         '
         'GroupBox4
@@ -677,7 +677,7 @@ Partial Class DashboardDoctorConsult
         Me.GroupBox4.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox4.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(1259, 255)
+        Me.GroupBox4.Size = New System.Drawing.Size(1259, 256)
         Me.GroupBox4.TabIndex = 8
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "History"
@@ -698,7 +698,7 @@ Partial Class DashboardDoctorConsult
         Me.GridHistoy.Name = "GridHistoy"
         Me.GridHistoy.RecordNavigator = True
         Me.GridHistoy.RowFormatStyle.FontSize = 12.0!
-        Me.GridHistoy.Size = New System.Drawing.Size(1253, 230)
+        Me.GridHistoy.Size = New System.Drawing.Size(1253, 231)
         Me.GridHistoy.TabIndex = 7
         Me.GridHistoy.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
         '
@@ -709,7 +709,7 @@ Partial Class DashboardDoctorConsult
         Me.GroupBox5.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox5.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(1259, 790)
+        Me.GroupBox5.Size = New System.Drawing.Size(1259, 794)
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "History Detail"
@@ -731,7 +731,7 @@ Partial Class DashboardDoctorConsult
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 22)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1253, 765)
+        Me.Panel1.Size = New System.Drawing.Size(1253, 769)
         Me.Panel1.TabIndex = 0
         '
         'TxtLaboratory
@@ -812,7 +812,7 @@ Partial Class DashboardDoctorConsult
         'UiTab2
         '
         Me.UiTab2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.UiTab2.Location = New System.Drawing.Point(0, 109)
+        Me.UiTab2.Location = New System.Drawing.Point(0, 113)
         Me.UiTab2.Name = "UiTab2"
         Me.UiTab2.Size = New System.Drawing.Size(1535, 639)
         Me.UiTab2.TabIndex = 52
@@ -1452,85 +1452,81 @@ Partial Class DashboardDoctorConsult
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
         Me.ToolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(35, 35)
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(25, 25)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnStartConsult, Me.ToolStripSeparator1, Me.btnRefreshData, Me.ToolStripSeparator2, Me.BtnDeleteWaiting, Me.ToolStripSeparator3, Me.BtnPatientHistory, Me.ToolStripSeparator4, Me.BtnEyeExam})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1263, 57)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1263, 52)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'BtnStartConsult
         '
-        Me.BtnStartConsult.BackgroundImage = CType(resources.GetObject("BtnStartConsult.BackgroundImage"), System.Drawing.Image)
         Me.BtnStartConsult.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnStartConsult.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnStartConsult.ForeColor = System.Drawing.Color.White
+        Me.BtnStartConsult.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnStartConsult.ForeColor = System.Drawing.Color.Blue
         Me.BtnStartConsult.Image = Global.HospitalMS.My.Resources.Resources.dokter
         Me.BtnStartConsult.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnStartConsult.Name = "BtnStartConsult"
-        Me.BtnStartConsult.Size = New System.Drawing.Size(171, 54)
+        Me.BtnStartConsult.Size = New System.Drawing.Size(183, 49)
         Me.BtnStartConsult.Text = "      New Examination      "
         Me.BtnStartConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 52)
         '
         'btnRefreshData
         '
-        Me.btnRefreshData.BackgroundImage = CType(resources.GetObject("btnRefreshData.BackgroundImage"), System.Drawing.Image)
         Me.btnRefreshData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRefreshData.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRefreshData.ForeColor = System.Drawing.Color.White
+        Me.btnRefreshData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefreshData.ForeColor = System.Drawing.Color.Blue
         Me.btnRefreshData.Image = Global.HospitalMS.My.Resources.Resources.refresh
         Me.btnRefreshData.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnRefreshData.Name = "btnRefreshData"
-        Me.btnRefreshData.Size = New System.Drawing.Size(143, 54)
+        Me.btnRefreshData.Size = New System.Drawing.Size(157, 49)
         Me.btnRefreshData.Text = "      Refresh Data      "
         Me.btnRefreshData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 52)
         '
         'BtnDeleteWaiting
         '
-        Me.BtnDeleteWaiting.BackgroundImage = CType(resources.GetObject("BtnDeleteWaiting.BackgroundImage"), System.Drawing.Image)
         Me.BtnDeleteWaiting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDeleteWaiting.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDeleteWaiting.ForeColor = System.Drawing.Color.White
+        Me.BtnDeleteWaiting.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDeleteWaiting.ForeColor = System.Drawing.Color.Blue
         Me.BtnDeleteWaiting.Image = Global.HospitalMS.My.Resources.Resources.delete_appointment
         Me.BtnDeleteWaiting.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnDeleteWaiting.Name = "BtnDeleteWaiting"
-        Me.BtnDeleteWaiting.Size = New System.Drawing.Size(181, 54)
+        Me.BtnDeleteWaiting.Size = New System.Drawing.Size(199, 49)
         Me.BtnDeleteWaiting.Text = "   Delete Waiting Consult   "
         Me.BtnDeleteWaiting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 52)
         '
         'BtnPatientHistory
         '
-        Me.BtnPatientHistory.BackgroundImage = CType(resources.GetObject("BtnPatientHistory.BackgroundImage"), System.Drawing.Image)
         Me.BtnPatientHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnPatientHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPatientHistory.ForeColor = System.Drawing.Color.White
+        Me.BtnPatientHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPatientHistory.ForeColor = System.Drawing.Color.Blue
         Me.BtnPatientHistory.Image = Global.HospitalMS.My.Resources.Resources._1417699293_Scheduled
         Me.BtnPatientHistory.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnPatientHistory.Name = "BtnPatientHistory"
-        Me.BtnPatientHistory.Size = New System.Drawing.Size(179, 54)
+        Me.BtnPatientHistory.Size = New System.Drawing.Size(197, 49)
         Me.BtnPatientHistory.Text = "    Patient History Report   "
         Me.BtnPatientHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 52)
         '
         'BtnEyeExam
         '
@@ -1540,7 +1536,7 @@ Partial Class DashboardDoctorConsult
         Me.BtnEyeExam.Image = CType(resources.GetObject("BtnEyeExam.Image"), System.Drawing.Image)
         Me.BtnEyeExam.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnEyeExam.Name = "BtnEyeExam"
-        Me.BtnEyeExam.Size = New System.Drawing.Size(127, 54)
+        Me.BtnEyeExam.Size = New System.Drawing.Size(127, 49)
         Me.BtnEyeExam.Text = "Eye Examination"
         '
         'ContextMenuFollowUp
@@ -1572,9 +1568,9 @@ Partial Class DashboardDoctorConsult
         'UiTab1
         '
         Me.UiTab1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UiTab1.Location = New System.Drawing.Point(0, 57)
+        Me.UiTab1.Location = New System.Drawing.Point(0, 52)
         Me.UiTab1.Name = "UiTab1"
-        Me.UiTab1.Size = New System.Drawing.Size(1263, 1082)
+        Me.UiTab1.Size = New System.Drawing.Size(1263, 1087)
         Me.UiTab1.TabIndex = 6
         Me.UiTab1.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.UiTabPage1, Me.UiTabPage3, Me.UiTabPage2})
         Me.UiTab1.TabsStateStyles.FormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
@@ -1592,7 +1588,7 @@ Partial Class DashboardDoctorConsult
         Me.UiTabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UiTabPage1.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage1.Name = "UiTabPage1"
-        Me.UiTabPage1.Size = New System.Drawing.Size(1261, 1053)
+        Me.UiTabPage1.Size = New System.Drawing.Size(1261, 1058)
         Me.UiTabPage1.TabStop = True
         Me.UiTabPage1.Text = "   &Patient Waiting Exam   "
         '
@@ -1602,7 +1598,7 @@ Partial Class DashboardDoctorConsult
         Me.UiTabPage3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UiTabPage3.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage3.Name = "UiTabPage3"
-        Me.UiTabPage3.Size = New System.Drawing.Size(1261, 1053)
+        Me.UiTabPage3.Size = New System.Drawing.Size(1261, 1058)
         Me.UiTabPage3.TabStop = True
         Me.UiTabPage3.Text = "   Patient Exam History   "
         '
@@ -1611,7 +1607,7 @@ Partial Class DashboardDoctorConsult
         Me.UiTabPage2.Controls.Add(Me.GridFollowUp)
         Me.UiTabPage2.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage2.Name = "UiTabPage2"
-        Me.UiTabPage2.Size = New System.Drawing.Size(1261, 1053)
+        Me.UiTabPage2.Size = New System.Drawing.Size(1261, 1058)
         Me.UiTabPage2.TabStop = True
         Me.UiTabPage2.Text = "Patient Follow Up Today"
         '
@@ -1636,7 +1632,7 @@ Partial Class DashboardDoctorConsult
         Me.GridFollowUp.Name = "GridFollowUp"
         Me.GridFollowUp.RecordNavigator = True
         Me.GridFollowUp.RowFormatStyle.FontSize = 12.0!
-        Me.GridFollowUp.Size = New System.Drawing.Size(1261, 1053)
+        Me.GridFollowUp.Size = New System.Drawing.Size(1261, 1058)
         Me.GridFollowUp.TabIndex = 7
         Me.GridFollowUp.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
         '

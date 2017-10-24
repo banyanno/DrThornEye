@@ -34,6 +34,7 @@ Partial Class DashboardIncome
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer
+        Me.AxAcroPDF1 = New AxAcroPDFLib.AxAcroPDF
         Me.GridIncome = New Janus.Windows.GridEX.GridEX
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
@@ -46,7 +47,6 @@ Partial Class DashboardIncome
         Me.DateFrom = New System.Windows.Forms.DateTimePicker
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
-        Me.AxAcroPDF1 = New AxAcroPDFLib.AxAcroPDF
         Me.ToolStrip1.SuspendLayout()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -54,6 +54,7 @@ Partial Class DashboardIncome
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
+        CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridIncome, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
@@ -62,7 +63,6 @@ Partial Class DashboardIncome
         CType(Me.GridService, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.GridPrescription, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -70,7 +70,7 @@ Partial Class DashboardIncome
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
         Me.ToolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(35, 35)
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(25, 25)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnPrintPreview, Me.ToolStripSeparator1, Me.BtnPrintlabel, Me.ToolStripSeparator2, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -80,14 +80,13 @@ Partial Class DashboardIncome
         '
         'BtnPrintPreview
         '
-        Me.BtnPrintPreview.BackgroundImage = CType(resources.GetObject("BtnPrintPreview.BackgroundImage"), System.Drawing.Image)
         Me.BtnPrintPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnPrintPreview.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPrintPreview.ForeColor = System.Drawing.Color.White
+        Me.BtnPrintPreview.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPrintPreview.ForeColor = System.Drawing.Color.Blue
         Me.BtnPrintPreview.Image = Global.HospitalMS.My.Resources.Resources.printer
         Me.BtnPrintPreview.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnPrintPreview.Name = "BtnPrintPreview"
-        Me.BtnPrintPreview.Size = New System.Drawing.Size(262, 59)
+        Me.BtnPrintPreview.Size = New System.Drawing.Size(226, 59)
         Me.BtnPrintPreview.Text = "     Print Invoice / Prescription   "
         Me.BtnPrintPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -98,14 +97,13 @@ Partial Class DashboardIncome
         '
         'BtnPrintlabel
         '
-        Me.BtnPrintlabel.BackgroundImage = CType(resources.GetObject("BtnPrintlabel.BackgroundImage"), System.Drawing.Image)
         Me.BtnPrintlabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnPrintlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPrintlabel.ForeColor = System.Drawing.Color.White
+        Me.BtnPrintlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPrintlabel.ForeColor = System.Drawing.Color.Blue
         Me.BtnPrintlabel.Image = Global.HospitalMS.My.Resources.Resources._1422017622_Terms_rev_512
         Me.BtnPrintlabel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnPrintlabel.Name = "BtnPrintlabel"
-        Me.BtnPrintlabel.Size = New System.Drawing.Size(154, 59)
+        Me.BtnPrintlabel.Size = New System.Drawing.Size(156, 59)
         Me.BtnPrintlabel.Text = "        Print Label         "
         Me.BtnPrintlabel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -116,14 +114,13 @@ Partial Class DashboardIncome
         '
         'ToolStripButton1
         '
-        Me.ToolStripButton1.BackgroundImage = CType(resources.GetObject("ToolStripButton1.BackgroundImage"), System.Drawing.Image)
         Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton1.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripButton1.Image = Global.HospitalMS.My.Resources.Resources.Receipt_oop
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(199, 59)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(204, 59)
         Me.ToolStripButton1.Text = "Print Preview In-Come         "
         Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -169,6 +166,16 @@ Partial Class DashboardIncome
         Me.SplitContainer2.Size = New System.Drawing.Size(1024, 532)
         Me.SplitContainer2.SplitterDistance = 326
         Me.SplitContainer2.TabIndex = 2
+        '
+        'AxAcroPDF1
+        '
+        Me.AxAcroPDF1.Enabled = True
+        Me.AxAcroPDF1.Location = New System.Drawing.Point(842, 160)
+        Me.AxAcroPDF1.Name = "AxAcroPDF1"
+        Me.AxAcroPDF1.OcxState = CType(resources.GetObject("AxAcroPDF1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxAcroPDF1.Size = New System.Drawing.Size(192, 192)
+        Me.AxAcroPDF1.TabIndex = 1
+        Me.AxAcroPDF1.Visible = False
         '
         'GridIncome
         '
@@ -351,16 +358,6 @@ Partial Class DashboardIncome
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Date From:"
         '
-        'AxAcroPDF1
-        '
-        Me.AxAcroPDF1.Enabled = True
-        Me.AxAcroPDF1.Location = New System.Drawing.Point(842, 160)
-        Me.AxAcroPDF1.Name = "AxAcroPDF1"
-        Me.AxAcroPDF1.OcxState = CType(resources.GetObject("AxAcroPDF1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxAcroPDF1.Size = New System.Drawing.Size(192, 192)
-        Me.AxAcroPDF1.TabIndex = 1
-        Me.AxAcroPDF1.Visible = False
-        '
         'DashboardIncome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -379,6 +376,7 @@ Partial Class DashboardIncome
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.ResumeLayout(False)
+        CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridIncome, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         Me.SplitContainer3.Panel2.ResumeLayout(False)
@@ -387,7 +385,6 @@ Partial Class DashboardIncome
         CType(Me.GridService, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.GridPrescription, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
