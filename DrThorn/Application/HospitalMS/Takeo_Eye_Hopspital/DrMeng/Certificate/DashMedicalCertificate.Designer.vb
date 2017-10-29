@@ -22,8 +22,8 @@ Partial Class DashMedicalCertificate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashMedicalCertificate))
         Dim GridCertificate_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashMedicalCertificate))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
         Me.BtnNewCertificate = New System.Windows.Forms.ToolStripButton
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
@@ -34,9 +34,9 @@ Partial Class DashMedicalCertificate
         Me.BtnPrintCertifcate = New System.Windows.Forms.ToolStripButton
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator
         Me.BtnRefresh = New System.Windows.Forms.ToolStripButton
-        Me.GridCertificate = New Janus.Windows.GridEX.GridEX
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
+        Me.GridCertificate = New Janus.Windows.GridEX.GridEX
         Me.ToolStrip1.SuspendLayout()
         CType(Me.GridCertificate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,10 +55,9 @@ Partial Class DashMedicalCertificate
         '
         'BtnNewCertificate
         '
-        Me.BtnNewCertificate.BackgroundImage = Global.HospitalMS.My.Resources.Resources.mZihS
         Me.BtnNewCertificate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnNewCertificate.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.BtnNewCertificate.ForeColor = System.Drawing.Color.White
+        Me.BtnNewCertificate.ForeColor = System.Drawing.Color.Blue
         Me.BtnNewCertificate.Image = Global.HospitalMS.My.Resources.Resources._1422017622_Terms_rev_512
         Me.BtnNewCertificate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnNewCertificate.Name = "BtnNewCertificate"
@@ -73,10 +72,9 @@ Partial Class DashMedicalCertificate
         '
         'BtnUpdateCertificate
         '
-        Me.BtnUpdateCertificate.BackgroundImage = CType(resources.GetObject("BtnUpdateCertificate.BackgroundImage"), System.Drawing.Image)
         Me.BtnUpdateCertificate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnUpdateCertificate.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.BtnUpdateCertificate.ForeColor = System.Drawing.Color.White
+        Me.BtnUpdateCertificate.ForeColor = System.Drawing.Color.Blue
         Me.BtnUpdateCertificate.Image = Global.HospitalMS.My.Resources.Resources._3d_orange_man_magnifying_glass
         Me.BtnUpdateCertificate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnUpdateCertificate.Name = "BtnUpdateCertificate"
@@ -91,10 +89,9 @@ Partial Class DashMedicalCertificate
         '
         'BtnDeleteCert
         '
-        Me.BtnDeleteCert.BackgroundImage = CType(resources.GetObject("BtnDeleteCert.BackgroundImage"), System.Drawing.Image)
         Me.BtnDeleteCert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnDeleteCert.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.BtnDeleteCert.ForeColor = System.Drawing.Color.White
+        Me.BtnDeleteCert.ForeColor = System.Drawing.Color.Blue
         Me.BtnDeleteCert.Image = Global.HospitalMS.My.Resources.Resources.delete_appointment
         Me.BtnDeleteCert.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnDeleteCert.Name = "BtnDeleteCert"
@@ -109,10 +106,9 @@ Partial Class DashMedicalCertificate
         '
         'BtnPrintCertifcate
         '
-        Me.BtnPrintCertifcate.BackgroundImage = Global.HospitalMS.My.Resources.Resources.mZihS
         Me.BtnPrintCertifcate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnPrintCertifcate.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.BtnPrintCertifcate.ForeColor = System.Drawing.Color.White
+        Me.BtnPrintCertifcate.ForeColor = System.Drawing.Color.Blue
         Me.BtnPrintCertifcate.Image = Global.HospitalMS.My.Resources.Resources._1421916923_printer
         Me.BtnPrintCertifcate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnPrintCertifcate.Name = "BtnPrintCertifcate"
@@ -127,16 +123,32 @@ Partial Class DashMedicalCertificate
         '
         'BtnRefresh
         '
-        Me.BtnRefresh.BackgroundImage = CType(resources.GetObject("BtnRefresh.BackgroundImage"), System.Drawing.Image)
         Me.BtnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnRefresh.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.BtnRefresh.ForeColor = System.Drawing.Color.White
+        Me.BtnRefresh.ForeColor = System.Drawing.Color.Blue
         Me.BtnRefresh.Image = Global.HospitalMS.My.Resources.Resources.refresh
         Me.BtnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnRefresh.Name = "BtnRefresh"
         Me.BtnRefresh.Size = New System.Drawing.Size(86, 49)
         Me.BtnRefresh.Text = "   Refresh   "
         Me.BtnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 52)
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ToolStripButton1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.ToolStripButton1.ForeColor = System.Drawing.Color.Blue
+        Me.ToolStripButton1.Image = Global.HospitalMS.My.Resources.Resources.refresh
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(91, 49)
+        Me.ToolStripButton1.Text = "   View All   "
+        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'GridCertificate
         '
@@ -162,24 +174,6 @@ Partial Class DashMedicalCertificate
         Me.GridCertificate.Size = New System.Drawing.Size(936, 603)
         Me.GridCertificate.TabIndex = 1
         Me.GridCertificate.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 52)
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.BackgroundImage = CType(resources.GetObject("ToolStripButton1.BackgroundImage"), System.Drawing.Image)
-        Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton1.Image = Global.HospitalMS.My.Resources.Resources.refresh
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(91, 49)
-        Me.ToolStripButton1.Text = "   View All   "
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'DashMedicalCertificate
         '

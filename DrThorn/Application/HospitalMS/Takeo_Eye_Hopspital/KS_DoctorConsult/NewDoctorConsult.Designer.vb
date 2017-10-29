@@ -69,7 +69,6 @@ Partial Class NewDoctorConsult
         Me.Label5 = New System.Windows.Forms.Label
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.LblConsult = New System.Windows.Forms.Label
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.TxtAgePatient = New System.Windows.Forms.TextBox
         Me.TxtTel = New System.Windows.Forms.TextBox
         Me.CboSexPatien = New System.Windows.Forms.ComboBox
@@ -81,6 +80,7 @@ Partial Class NewDoctorConsult
         Me.Label9 = New System.Windows.Forms.Label
         Me.TxtPatientNo = New System.Windows.Forms.TextBox
         Me.Label10 = New System.Windows.Forms.Label
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.LblPrice = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
@@ -158,7 +158,9 @@ Partial Class NewDoctorConsult
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
         Me.MchLaborate = New System.Windows.Forms.CheckedListBox
         Me.ChLaborat = New System.Windows.Forms.CheckBox
+        Me.TxtHistory = New System.Windows.Forms.TextBox
         Me.MchLaser = New System.Windows.Forms.CheckedListBox
+        Me.Label27 = New System.Windows.Forms.Label
         Me.MChInvestigate = New System.Windows.Forms.CheckedListBox
         Me.LblInvestPrice = New System.Windows.Forms.Label
         Me.LblLaserPrice = New System.Windows.Forms.Label
@@ -169,8 +171,6 @@ Partial Class NewDoctorConsult
         Me.ChRefraction = New System.Windows.Forms.CheckBox
         Me.ChConsultFree = New System.Windows.Forms.CheckBox
         Me.Label30 = New System.Windows.Forms.Label
-        Me.TxtHistory = New System.Windows.Forms.TextBox
-        Me.Label27 = New System.Windows.Forms.Label
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
@@ -744,16 +744,6 @@ Partial Class NewDoctorConsult
         Me.LblConsult.Text = "0"
         Me.LblConsult.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(1302, 131)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(91, 89)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 78
-        Me.PictureBox1.TabStop = False
-        '
         'TxtAgePatient
         '
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtAgePatient, Nothing)
@@ -864,6 +854,16 @@ Partial Class NewDoctorConsult
         Me.Label10.Size = New System.Drawing.Size(87, 20)
         Me.Label10.TabIndex = 43
         Me.Label10.Text = "Patient No:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(1302, 131)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(91, 89)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 78
+        Me.PictureBox1.TabStop = False
         '
         'LblPrice
         '
@@ -1903,6 +1903,18 @@ Partial Class NewDoctorConsult
         Me.ChLaborat.Text = "Laboratory"
         Me.ChLaborat.UseVisualStyleBackColor = False
         '
+        'TxtHistory
+        '
+        Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtHistory, Nothing)
+        Me.TxtHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtHistory.Location = New System.Drawing.Point(13, 149)
+        Me.TxtHistory.Multiline = True
+        Me.TxtHistory.Name = "TxtHistory"
+        Me.TxtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TxtHistory.Size = New System.Drawing.Size(494, 62)
+        Me.TxtHistory.TabIndex = 1
+        '
         'MchLaser
         '
         Me.MchLaser.CheckOnClick = True
@@ -1914,6 +1926,18 @@ Partial Class NewDoctorConsult
         Me.MchLaser.Size = New System.Drawing.Size(179, 88)
         Me.MchLaser.Sorted = True
         Me.MchLaser.TabIndex = 41
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.Blue
+        Me.Label27.Location = New System.Drawing.Point(9, 126)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(136, 20)
+        Me.Label27.TabIndex = 29
+        Me.Label27.Text = "Complain / History"
         '
         'MChInvestigate
         '
@@ -2035,30 +2059,6 @@ Partial Class NewDoctorConsult
         Me.Label30.TabIndex = 34
         Me.Label30.Text = "Consul Fee:"
         '
-        'TxtHistory
-        '
-        Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtHistory, Nothing)
-        Me.TxtHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtHistory.Location = New System.Drawing.Point(13, 149)
-        Me.TxtHistory.Multiline = True
-        Me.TxtHistory.Name = "TxtHistory"
-        Me.TxtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TxtHistory.Size = New System.Drawing.Size(494, 62)
-        Me.TxtHistory.TabIndex = 1
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.BackColor = System.Drawing.Color.Transparent
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.Blue
-        Me.Label27.Location = New System.Drawing.Point(9, 126)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(136, 20)
-        Me.Label27.TabIndex = 29
-        Me.Label27.Text = "Complain / History"
-        '
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
@@ -2176,7 +2176,7 @@ Partial Class NewDoctorConsult
         Me.AxAcroPDF1.Location = New System.Drawing.Point(0, 0)
         Me.AxAcroPDF1.Name = "AxAcroPDF1"
         Me.AxAcroPDF1.OcxState = CType(resources.GetObject("AxAcroPDF1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxAcroPDF1.Size = New System.Drawing.Size(531, 796)
+        Me.AxAcroPDF1.Size = New System.Drawing.Size(94, 98)
         Me.AxAcroPDF1.TabIndex = 1
         '
         'PicLoadReport

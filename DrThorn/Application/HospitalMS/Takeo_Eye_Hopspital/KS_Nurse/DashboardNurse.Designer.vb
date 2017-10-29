@@ -192,7 +192,7 @@ Partial Class DashboardNurse
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
         Me.SplitContainer1.Panel2Collapsed = True
         Me.SplitContainer1.Size = New System.Drawing.Size(1029, 436)
-        Me.SplitContainer1.SplitterDistance = 416
+        Me.SplitContainer1.SplitterDistance = 411
         Me.SplitContainer1.TabIndex = 6
         '
         'SplitContainer2
@@ -299,7 +299,7 @@ Partial Class DashboardNurse
         Me.TxtNote.Multiline = True
         Me.TxtNote.Name = "TxtNote"
         Me.TxtNote.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TxtNote.Size = New System.Drawing.Size(553, 123)
+        Me.TxtNote.Size = New System.Drawing.Size(537, 123)
         Me.TxtNote.TabIndex = 1
         '
         'GroupBox1
@@ -327,7 +327,7 @@ Partial Class DashboardNurse
         Me.GroupBox1.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox1.Location = New System.Drawing.Point(7, 165)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(554, 137)
+        Me.GroupBox1.Size = New System.Drawing.Size(538, 137)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Visual Acuity"
