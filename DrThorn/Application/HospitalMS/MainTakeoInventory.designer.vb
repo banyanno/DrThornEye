@@ -1262,6 +1262,7 @@ Partial Class MainTakeoInventory
         '
         'PictureBox3
         '
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox3.Image = Global.HospitalMS.My.Resources.Resources.Eye_Health_System_Components
         Me.PictureBox3.Location = New System.Drawing.Point(0, 0)

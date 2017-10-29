@@ -746,6 +746,7 @@ Public Class NewDoctorConsult
         If ValidateCombobox(CboEyeDiagnosis, "", ErrConsult) = False Then Exit Sub
         If ValidateCombobox(CboManagerment, "", ErrConsult) = False Then Exit Sub
         If CboManagerment.Text = "Surgery" Then
+
             If ValidateCombobox(CboSurgery, "", ErrConsult) = False Then Exit Sub
             If ValidateDateTimePicker(DateOT, "Please select date opteration", ErrConsult) = False Then Exit Sub
             If ValidateDateTimePicker(CboOperationTime, "Time operation", ErrConsult) = False Then Exit Sub
@@ -755,6 +756,7 @@ Public Class NewDoctorConsult
                 CboSurgery.SelectAll()
                 Exit Sub
             End If
+            UiTab2.SelectedIndex = 1
         End If
         Dim Is_Old As Boolean = False
         Dim ChEye As String

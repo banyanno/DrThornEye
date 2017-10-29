@@ -96,7 +96,6 @@ Partial Class NewDoctorConsult
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
         Me.ErrConsult = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer
         Me.CboEyeDiagnosis = New System.Windows.Forms.ComboBox
         Me.Label11 = New System.Windows.Forms.Label
         Me.Label38 = New System.Windows.Forms.Label
@@ -190,6 +189,8 @@ Partial Class NewDoctorConsult
         Me.ContainerControlCommand1 = New Janus.Windows.Ribbon.ContainerControlCommand
         Me.BgLoadHistoryPatient = New System.ComponentModel.BackgroundWorker
         Me.AutoDiagnosis = New AutocompleteMenuNS.AutocompleteMenu
+        Me.UiTabPage2 = New Janus.Windows.UI.Tab.UITabPage
+        Me.UiTabPage4 = New Janus.Windows.UI.Tab.UITabPage
         Me.GroupBox4.SuspendLayout()
         CType(Me.GridImageList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupFollowup.SuspendLayout()
@@ -197,15 +198,11 @@ Partial Class NewDoctorConsult
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrConsult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.SplitContainer2.Panel1.SuspendLayout()
-        Me.SplitContainer2.Panel2.SuspendLayout()
-        Me.SplitContainer2.SuspendLayout()
         Me.GroupSurgery.SuspendLayout()
         CType(Me.UiTab2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiTab2.SuspendLayout()
         Me.UiTabPage1.SuspendLayout()
         Me.SplitContainer3.Panel1.SuspendLayout()
-        Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -218,6 +215,8 @@ Partial Class NewDoctorConsult
         Me.SplitContainer1.SuspendLayout()
         CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicLoadReport, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UiTabPage2.SuspendLayout()
+        Me.UiTabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TxtDiagnosisCode
@@ -225,7 +224,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtDiagnosisCode, Nothing)
         Me.TxtDiagnosisCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDiagnosisCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDiagnosisCode.Location = New System.Drawing.Point(718, 22)
+        Me.TxtDiagnosisCode.Location = New System.Drawing.Point(725, 31)
         Me.TxtDiagnosisCode.Name = "TxtDiagnosisCode"
         Me.TxtDiagnosisCode.Size = New System.Drawing.Size(120, 26)
         Me.TxtDiagnosisCode.TabIndex = 3
@@ -301,7 +300,7 @@ Partial Class NewDoctorConsult
         Me.GroupBox4.Controls.Add(Me.Label23)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Blue
-        Me.GroupBox4.Location = New System.Drawing.Point(513, 129)
+        Me.GroupBox4.Location = New System.Drawing.Point(513, 164)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(671, 91)
         Me.GroupBox4.TabIndex = 2
@@ -543,7 +542,7 @@ Partial Class NewDoctorConsult
         Me.ChIssueGlasses.AutoSize = True
         Me.ChIssueGlasses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChIssueGlasses.ForeColor = System.Drawing.Color.Red
-        Me.ChIssueGlasses.Location = New System.Drawing.Point(189, 78)
+        Me.ChIssueGlasses.Location = New System.Drawing.Point(821, 103)
         Me.ChIssueGlasses.Name = "ChIssueGlasses"
         Me.ChIssueGlasses.Size = New System.Drawing.Size(129, 24)
         Me.ChIssueGlasses.TabIndex = 1
@@ -553,7 +552,8 @@ Partial Class NewDoctorConsult
         '
         'GridImageList
         '
-        Me.GridImageList.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GridImageList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridImageList.BorderStyle = Janus.Windows.GridEX.BorderStyle.RaisedLight3D
         Me.GridImageList.CardBorders = False
@@ -570,7 +570,7 @@ Partial Class NewDoctorConsult
         Me.GridImageList.HideSelection = Janus.Windows.GridEX.HideSelection.HighlightInactive
         Me.GridImageList.Location = New System.Drawing.Point(6, 43)
         Me.GridImageList.Name = "GridImageList"
-        Me.GridImageList.Size = New System.Drawing.Size(2323, 265)
+        Me.GridImageList.Size = New System.Drawing.Size(2279, 443)
         Me.GridImageList.TabIndex = 2
         Me.GridImageList.View = Janus.Windows.GridEX.View.CardView
         '
@@ -580,7 +580,7 @@ Partial Class NewDoctorConsult
         Me.ChFollowUp.BackColor = System.Drawing.Color.Transparent
         Me.ChFollowUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChFollowUp.ForeColor = System.Drawing.Color.Red
-        Me.ChFollowUp.Location = New System.Drawing.Point(18, -1)
+        Me.ChFollowUp.Location = New System.Drawing.Point(864, 210)
         Me.ChFollowUp.Name = "ChFollowUp"
         Me.ChFollowUp.Size = New System.Drawing.Size(102, 24)
         Me.ChFollowUp.TabIndex = 0
@@ -592,7 +592,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtMedication, Nothing)
         Me.TxtMedication.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtMedication.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMedication.Location = New System.Drawing.Point(3, 121)
+        Me.TxtMedication.Location = New System.Drawing.Point(11, 125)
         Me.TxtMedication.Multiline = True
         Me.TxtMedication.Name = "TxtMedication"
         Me.TxtMedication.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -614,9 +614,9 @@ Partial Class NewDoctorConsult
         Me.GroupFollowup.Controls.Add(Me.Label5)
         Me.GroupFollowup.Enabled = False
         Me.GroupFollowup.ForeColor = System.Drawing.Color.Red
-        Me.GroupFollowup.Location = New System.Drawing.Point(7, 4)
+        Me.GroupFollowup.Location = New System.Drawing.Point(853, 217)
         Me.GroupFollowup.Name = "GroupFollowup"
-        Me.GroupFollowup.Size = New System.Drawing.Size(411, 281)
+        Me.GroupFollowup.Size = New System.Drawing.Size(411, 267)
         Me.GroupFollowup.TabIndex = 1
         Me.GroupFollowup.TabStop = False
         '
@@ -642,9 +642,6 @@ Partial Class NewDoctorConsult
         '
         'TxtFollowUpNote
         '
-        Me.TxtFollowUpNote.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtFollowUpNote, Nothing)
         Me.TxtFollowUpNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFollowUpNote.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
@@ -652,7 +649,7 @@ Partial Class NewDoctorConsult
         Me.TxtFollowUpNote.Multiline = True
         Me.TxtFollowUpNote.Name = "TxtFollowUpNote"
         Me.TxtFollowUpNote.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TxtFollowUpNote.Size = New System.Drawing.Size(383, 170)
+        Me.TxtFollowUpNote.Size = New System.Drawing.Size(393, 113)
         Me.TxtFollowUpNote.TabIndex = 2
         '
         'Label24
@@ -713,23 +710,30 @@ Partial Class NewDoctorConsult
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.LblConsult)
         Me.GroupBox1.Controls.Add(Me.TxtAgePatient)
         Me.GroupBox1.Controls.Add(Me.TxtTel)
         Me.GroupBox1.Controls.Add(Me.CboSexPatien)
         Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.ChAddmitted)
+        Me.GroupBox1.Controls.Add(Me.ChIssueGlasses)
         Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.CboExamFee)
+        Me.GroupBox1.Controls.Add(Me.ChRefraction)
         Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.ChConsultFree)
         Me.GroupBox1.Controls.Add(Me.TxtNameKhmer)
         Me.GroupBox1.Controls.Add(Me.TxtNameEng)
+        Me.GroupBox1.Controls.Add(Me.Label30)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.TxtPatientNo)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Blue
-        Me.GroupBox1.Location = New System.Drawing.Point(891, 18)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(505, 109)
+        Me.GroupBox1.Size = New System.Drawing.Size(1177, 148)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Patient Info"
@@ -821,7 +825,7 @@ Partial Class NewDoctorConsult
         Me.TxtNameEng.Font = New System.Drawing.Font("Khmer OS Battambang", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNameEng.Location = New System.Drawing.Point(115, 55)
         Me.TxtNameEng.Name = "TxtNameEng"
-        Me.TxtNameEng.Size = New System.Drawing.Size(381, 45)
+        Me.TxtNameEng.Size = New System.Drawing.Size(383, 45)
         Me.TxtNameEng.TabIndex = 1
         '
         'Label9
@@ -858,9 +862,9 @@ Partial Class NewDoctorConsult
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(1302, 131)
+        Me.PictureBox1.Location = New System.Drawing.Point(504, 19)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(91, 89)
+        Me.PictureBox1.Size = New System.Drawing.Size(118, 120)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 78
         Me.PictureBox1.TabStop = False
@@ -895,7 +899,7 @@ Partial Class NewDoctorConsult
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Blue
-        Me.Label3.Location = New System.Drawing.Point(246, 75)
+        Me.Label3.Location = New System.Drawing.Point(253, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 20)
         Me.Label3.TabIndex = 9
@@ -906,11 +910,11 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtDiagnosisNote, Nothing)
         Me.TxtDiagnosisNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDiagnosisNote.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDiagnosisNote.Location = New System.Drawing.Point(1986, 394)
+        Me.TxtDiagnosisNote.Location = New System.Drawing.Point(1372, 152)
         Me.TxtDiagnosisNote.Multiline = True
         Me.TxtDiagnosisNote.Name = "TxtDiagnosisNote"
         Me.TxtDiagnosisNote.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TxtDiagnosisNote.Size = New System.Drawing.Size(932, 61)
+        Me.TxtDiagnosisNote.Size = New System.Drawing.Size(265, 61)
         Me.TxtDiagnosisNote.TabIndex = 4
         Me.TxtDiagnosisNote.Visible = False
         '
@@ -920,7 +924,7 @@ Partial Class NewDoctorConsult
         Me.Label33.BackColor = System.Drawing.Color.Transparent
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.Red
-        Me.Label33.Location = New System.Drawing.Point(645, 75)
+        Me.Label33.Location = New System.Drawing.Point(652, 77)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(16, 20)
         Me.Label33.TabIndex = 16
@@ -933,7 +937,7 @@ Partial Class NewDoctorConsult
         Me.Label31.BackColor = System.Drawing.Color.Transparent
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Blue
-        Me.Label31.Location = New System.Drawing.Point(30, 172)
+        Me.Label31.Location = New System.Drawing.Point(50, 218)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(44, 20)
         Me.Label31.TabIndex = 15
@@ -942,14 +946,13 @@ Partial Class NewDoctorConsult
         '
         'BtnAddSurgery
         '
-        Me.BtnAddSurgery.BackgroundImage = CType(resources.GetObject("BtnAddSurgery.BackgroundImage"), System.Drawing.Image)
         Me.BtnAddSurgery.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAddSurgery.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnAddSurgery.Enabled = False
         Me.BtnAddSurgery.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnAddSurgery.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddSurgery.ForeColor = System.Drawing.Color.White
-        Me.BtnAddSurgery.Location = New System.Drawing.Point(665, 67)
+        Me.BtnAddSurgery.ForeColor = System.Drawing.Color.Blue
+        Me.BtnAddSurgery.Location = New System.Drawing.Point(672, 71)
         Me.BtnAddSurgery.Name = "BtnAddSurgery"
         Me.BtnAddSurgery.Size = New System.Drawing.Size(45, 26)
         Me.BtnAddSurgery.TabIndex = 0
@@ -962,7 +965,7 @@ Partial Class NewDoctorConsult
         Me.TxtPriceSurgery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtPriceSurgery.Enabled = False
         Me.TxtPriceSurgery.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPriceSurgery.Location = New System.Drawing.Point(61, 180)
+        Me.TxtPriceSurgery.Location = New System.Drawing.Point(81, 226)
         Me.TxtPriceSurgery.Name = "TxtPriceSurgery"
         Me.TxtPriceSurgery.Size = New System.Drawing.Size(101, 26)
         Me.TxtPriceSurgery.TabIndex = 1
@@ -978,7 +981,7 @@ Partial Class NewDoctorConsult
         Me.CboSurgery.Enabled = False
         Me.CboSurgery.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboSurgery.FormattingEnabled = True
-        Me.CboSurgery.Location = New System.Drawing.Point(342, 67)
+        Me.CboSurgery.Location = New System.Drawing.Point(349, 69)
         Me.CboSurgery.Name = "CboSurgery"
         Me.CboSurgery.Size = New System.Drawing.Size(297, 28)
         Me.CboSurgery.TabIndex = 6
@@ -1029,57 +1032,14 @@ Partial Class NewDoctorConsult
         Me.Panel2.AutoSize = True
         Me.Panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.Panel2.Controls.Add(Me.TxtDiagnosisNote)
+        Me.Panel2.Controls.Add(Me.UiTab2)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.GroupBox2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1158, 803)
+        Me.Panel2.Size = New System.Drawing.Size(2847, 803)
         Me.Panel2.TabIndex = 0
-        '
-        'SplitContainer2
-        '
-        Me.SplitContainer2.BackColor = System.Drawing.Color.Transparent
-        Me.SplitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer2.Location = New System.Drawing.Point(0, 223)
-        Me.SplitContainer2.Name = "SplitContainer2"
-        Me.SplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer2.Panel1
-        '
-        Me.SplitContainer2.Panel1.AutoScroll = True
-        Me.SplitContainer2.Panel1.Controls.Add(Me.CboEyeDiagnosis)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label11)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label38)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.TxtDiagCodeLeftEye)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.CboDiagLeftEye)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.CboDiagRight)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.GroupSurgery)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.TxtDiagnosisCode)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.TxtSurgeryCode)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label1)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label39)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label3)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label37)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.BtnAddDiagnosis)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.TxtMedication)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label29)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label33)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.CboSurgery)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.CboManagerment)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Label32)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.BtnAddSurgery)
-        '
-        'SplitContainer2.Panel2
-        '
-        Me.SplitContainer2.Panel2.Controls.Add(Me.UiTab2)
-        Me.SplitContainer2.Size = New System.Drawing.Size(2918, 563)
-        Me.SplitContainer2.SplitterDistance = 213
-        Me.SplitContainer2.TabIndex = 22
         '
         'CboEyeDiagnosis
         '
@@ -1090,7 +1050,7 @@ Partial Class NewDoctorConsult
         Me.CboEyeDiagnosis.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboEyeDiagnosis.FormattingEnabled = True
         Me.CboEyeDiagnosis.Items.AddRange(New Object() {"", "Right Eye", "Left Eye", "Both Eyes", "BE"})
-        Me.CboEyeDiagnosis.Location = New System.Drawing.Point(93, 25)
+        Me.CboEyeDiagnosis.Location = New System.Drawing.Point(100, 29)
         Me.CboEyeDiagnosis.Name = "CboEyeDiagnosis"
         Me.CboEyeDiagnosis.Size = New System.Drawing.Size(133, 28)
         Me.CboEyeDiagnosis.TabIndex = 32
@@ -1100,7 +1060,7 @@ Partial Class NewDoctorConsult
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(146, 2)
+        Me.Label11.Location = New System.Drawing.Point(153, 6)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(36, 20)
         Me.Label11.TabIndex = 31
@@ -1112,7 +1072,7 @@ Partial Class NewDoctorConsult
         Me.Label38.BackColor = System.Drawing.Color.Transparent
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.ForeColor = System.Drawing.Color.Blue
-        Me.Label38.Location = New System.Drawing.Point(4, 100)
+        Me.Label38.Location = New System.Drawing.Point(11, 99)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(61, 20)
         Me.Label38.TabIndex = 30
@@ -1123,7 +1083,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtDiagCodeLeftEye, Nothing)
         Me.TxtDiagCodeLeftEye.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDiagCodeLeftEye.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDiagCodeLeftEye.Location = New System.Drawing.Point(792, 123)
+        Me.TxtDiagCodeLeftEye.Location = New System.Drawing.Point(1473, 243)
         Me.TxtDiagCodeLeftEye.Name = "TxtDiagCodeLeftEye"
         Me.TxtDiagCodeLeftEye.Size = New System.Drawing.Size(120, 26)
         Me.TxtDiagCodeLeftEye.TabIndex = 27
@@ -1135,7 +1095,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.CboDiagLeftEye, Me.AutoDiagnosis)
         Me.CboDiagLeftEye.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CboDiagLeftEye.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboDiagLeftEye.Location = New System.Drawing.Point(742, 119)
+        Me.CboDiagLeftEye.Location = New System.Drawing.Point(749, 123)
         Me.CboDiagLeftEye.Name = "CboDiagLeftEye"
         Me.CboDiagLeftEye.Size = New System.Drawing.Size(10, 30)
         Me.CboDiagLeftEye.TabIndex = 26
@@ -1146,7 +1106,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.CboDiagRight, Me.AutoDiagnosis)
         Me.CboDiagRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CboDiagRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboDiagRight.Location = New System.Drawing.Point(266, 23)
+        Me.CboDiagRight.Location = New System.Drawing.Point(273, 27)
         Me.CboDiagRight.Name = "CboDiagRight"
         Me.CboDiagRight.Size = New System.Drawing.Size(373, 30)
         Me.CboDiagRight.TabIndex = 22
@@ -1174,12 +1134,13 @@ Partial Class NewDoctorConsult
         Me.GroupSurgery.Controls.Add(Me.CboOperationTime)
         Me.GroupSurgery.Controls.Add(Me.Label48)
         Me.GroupSurgery.Controls.Add(Me.Label49)
+        Me.GroupSurgery.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupSurgery.Enabled = False
         Me.GroupSurgery.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupSurgery.ForeColor = System.Drawing.Color.Blue
-        Me.GroupSurgery.Location = New System.Drawing.Point(844, 0)
+        Me.GroupSurgery.Location = New System.Drawing.Point(0, 0)
         Me.GroupSurgery.Name = "GroupSurgery"
-        Me.GroupSurgery.Size = New System.Drawing.Size(741, 182)
+        Me.GroupSurgery.Size = New System.Drawing.Size(2845, 514)
         Me.GroupSurgery.TabIndex = 0
         Me.GroupSurgery.TabStop = False
         Me.GroupSurgery.Text = "Surgery Registration"
@@ -1190,7 +1151,7 @@ Partial Class NewDoctorConsult
         Me.Label45.BackColor = System.Drawing.Color.Transparent
         Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.ForeColor = System.Drawing.Color.Red
-        Me.Label45.Location = New System.Drawing.Point(658, 30)
+        Me.Label45.Location = New System.Drawing.Point(678, 76)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(16, 20)
         Me.Label45.TabIndex = 20
@@ -1202,7 +1163,7 @@ Partial Class NewDoctorConsult
         Me.Label40.BackColor = System.Drawing.Color.Transparent
         Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label40.ForeColor = System.Drawing.Color.Red
-        Me.Label40.Location = New System.Drawing.Point(323, 32)
+        Me.Label40.Location = New System.Drawing.Point(343, 78)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(16, 20)
         Me.Label40.TabIndex = 19
@@ -1214,7 +1175,7 @@ Partial Class NewDoctorConsult
         Me.DateOT.CustomFormat = "dd/MM/yyyy"
         Me.DateOT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateOT.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateOT.Location = New System.Drawing.Point(482, 24)
+        Me.DateOT.Location = New System.Drawing.Point(502, 70)
         Me.DateOT.Name = "DateOT"
         Me.DateOT.ShowCheckBox = True
         Me.DateOT.Size = New System.Drawing.Size(171, 26)
@@ -1229,7 +1190,7 @@ Partial Class NewDoctorConsult
         Me.CboAnesthetist.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboAnesthetist.FormattingEnabled = True
         Me.CboAnesthetist.IntegralHeight = False
-        Me.CboAnesthetist.Location = New System.Drawing.Point(482, 58)
+        Me.CboAnesthetist.Location = New System.Drawing.Point(502, 104)
         Me.CboAnesthetist.Name = "CboAnesthetist"
         Me.CboAnesthetist.Size = New System.Drawing.Size(244, 28)
         Me.CboAnesthetist.TabIndex = 3
@@ -1243,7 +1204,7 @@ Partial Class NewDoctorConsult
         Me.TxtCirculation.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCirculation.FormattingEnabled = True
         Me.TxtCirculation.IntegralHeight = False
-        Me.TxtCirculation.Location = New System.Drawing.Point(482, 97)
+        Me.TxtCirculation.Location = New System.Drawing.Point(502, 143)
         Me.TxtCirculation.Name = "TxtCirculation"
         Me.TxtCirculation.Size = New System.Drawing.Size(244, 28)
         Me.TxtCirculation.TabIndex = 5
@@ -1257,7 +1218,7 @@ Partial Class NewDoctorConsult
         Me.CboAssistant.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboAssistant.FormattingEnabled = True
         Me.CboAssistant.IntegralHeight = False
-        Me.CboAssistant.Location = New System.Drawing.Point(128, 137)
+        Me.CboAssistant.Location = New System.Drawing.Point(148, 183)
         Me.CboAssistant.Name = "CboAssistant"
         Me.CboAssistant.Size = New System.Drawing.Size(192, 28)
         Me.CboAssistant.TabIndex = 6
@@ -1270,7 +1231,7 @@ Partial Class NewDoctorConsult
         Me.CboSurgeon.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboSurgeon.FormattingEnabled = True
         Me.CboSurgeon.IntegralHeight = False
-        Me.CboSurgeon.Location = New System.Drawing.Point(128, 97)
+        Me.CboSurgeon.Location = New System.Drawing.Point(148, 143)
         Me.CboSurgeon.Name = "CboSurgeon"
         Me.CboSurgeon.Size = New System.Drawing.Size(192, 28)
         Me.CboSurgeon.TabIndex = 4
@@ -1280,7 +1241,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtCompli, Nothing)
         Me.TxtCompli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtCompli.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCompli.Location = New System.Drawing.Point(482, 132)
+        Me.TxtCompli.Location = New System.Drawing.Point(502, 178)
         Me.TxtCompli.Multiline = True
         Me.TxtCompli.Name = "TxtCompli"
         Me.TxtCompli.Size = New System.Drawing.Size(244, 46)
@@ -1291,7 +1252,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtAnesthesia, Nothing)
         Me.TxtAnesthesia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtAnesthesia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtAnesthesia.Location = New System.Drawing.Point(127, 60)
+        Me.TxtAnesthesia.Location = New System.Drawing.Point(147, 106)
         Me.TxtAnesthesia.Name = "TxtAnesthesia"
         Me.TxtAnesthesia.Size = New System.Drawing.Size(193, 26)
         Me.TxtAnesthesia.TabIndex = 2
@@ -1299,7 +1260,7 @@ Partial Class NewDoctorConsult
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(344, 145)
+        Me.Label41.Location = New System.Drawing.Point(364, 191)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(61, 20)
         Me.Label41.TabIndex = 6
@@ -1308,7 +1269,7 @@ Partial Class NewDoctorConsult
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(342, 105)
+        Me.Label42.Location = New System.Drawing.Point(364, 151)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(87, 20)
         Me.Label42.TabIndex = 6
@@ -1317,7 +1278,7 @@ Partial Class NewDoctorConsult
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(13, 145)
+        Me.Label43.Location = New System.Drawing.Point(26, 191)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(55, 20)
         Me.Label43.TabIndex = 6
@@ -1326,7 +1287,7 @@ Partial Class NewDoctorConsult
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(13, 105)
+        Me.Label44.Location = New System.Drawing.Point(26, 151)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(74, 20)
         Me.Label44.TabIndex = 5
@@ -1335,7 +1296,7 @@ Partial Class NewDoctorConsult
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(339, 66)
+        Me.Label46.Location = New System.Drawing.Point(364, 112)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(139, 20)
         Me.Label46.TabIndex = 2
@@ -1344,7 +1305,7 @@ Partial Class NewDoctorConsult
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(12, 66)
+        Me.Label47.Location = New System.Drawing.Point(26, 112)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(93, 20)
         Me.Label47.TabIndex = 2
@@ -1355,7 +1316,7 @@ Partial Class NewDoctorConsult
         Me.CboOperationTime.Checked = False
         Me.CboOperationTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboOperationTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.CboOperationTime.Location = New System.Drawing.Point(127, 24)
+        Me.CboOperationTime.Location = New System.Drawing.Point(147, 70)
         Me.CboOperationTime.Name = "CboOperationTime"
         Me.CboOperationTime.ShowCheckBox = True
         Me.CboOperationTime.ShowUpDown = True
@@ -1365,7 +1326,7 @@ Partial Class NewDoctorConsult
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(339, 30)
+        Me.Label48.Location = New System.Drawing.Point(364, 76)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(110, 20)
         Me.Label48.TabIndex = 0
@@ -1374,7 +1335,7 @@ Partial Class NewDoctorConsult
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(8, 30)
+        Me.Label49.Location = New System.Drawing.Point(26, 76)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(118, 20)
         Me.Label49.TabIndex = 0
@@ -1386,7 +1347,7 @@ Partial Class NewDoctorConsult
         Me.TxtSurgeryCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSurgeryCode.Enabled = False
         Me.TxtSurgeryCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSurgeryCode.Location = New System.Drawing.Point(719, 67)
+        Me.TxtSurgeryCode.Location = New System.Drawing.Point(726, 71)
         Me.TxtSurgeryCode.Name = "TxtSurgeryCode"
         Me.TxtSurgeryCode.Size = New System.Drawing.Size(119, 26)
         Me.TxtSurgeryCode.TabIndex = 21
@@ -1399,7 +1360,7 @@ Partial Class NewDoctorConsult
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Blue
-        Me.Label1.Location = New System.Drawing.Point(4, 32)
+        Me.Label1.Location = New System.Drawing.Point(11, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 20)
         Me.Label1.TabIndex = 2
@@ -1411,7 +1372,7 @@ Partial Class NewDoctorConsult
         Me.Label39.BackColor = System.Drawing.Color.Transparent
         Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.ForeColor = System.Drawing.Color.Blue
-        Me.Label39.Location = New System.Drawing.Point(4, 75)
+        Me.Label39.Location = New System.Drawing.Point(11, 77)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(71, 20)
         Me.Label39.TabIndex = 20
@@ -1423,7 +1384,7 @@ Partial Class NewDoctorConsult
         Me.Label37.BackColor = System.Drawing.Color.Transparent
         Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.ForeColor = System.Drawing.Color.Red
-        Me.Label37.Location = New System.Drawing.Point(232, 75)
+        Me.Label37.Location = New System.Drawing.Point(239, 77)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(16, 20)
         Me.Label37.TabIndex = 19
@@ -1432,13 +1393,12 @@ Partial Class NewDoctorConsult
         'BtnAddDiagnosis
         '
         Me.BtnAddDiagnosis.BackColor = System.Drawing.Color.Transparent
-        Me.BtnAddDiagnosis.BackgroundImage = CType(resources.GetObject("BtnAddDiagnosis.BackgroundImage"), System.Drawing.Image)
         Me.BtnAddDiagnosis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAddDiagnosis.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnAddDiagnosis.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnAddDiagnosis.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddDiagnosis.ForeColor = System.Drawing.Color.White
-        Me.BtnAddDiagnosis.Location = New System.Drawing.Point(665, 21)
+        Me.BtnAddDiagnosis.ForeColor = System.Drawing.Color.Blue
+        Me.BtnAddDiagnosis.Location = New System.Drawing.Point(672, 30)
         Me.BtnAddDiagnosis.Name = "BtnAddDiagnosis"
         Me.BtnAddDiagnosis.Size = New System.Drawing.Size(45, 27)
         Me.BtnAddDiagnosis.TabIndex = 2
@@ -1451,7 +1411,7 @@ Partial Class NewDoctorConsult
         Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.Blue
-        Me.Label29.Location = New System.Drawing.Point(738, -1)
+        Me.Label29.Location = New System.Drawing.Point(745, 3)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(47, 20)
         Me.Label29.TabIndex = 14
@@ -1466,7 +1426,7 @@ Partial Class NewDoctorConsult
         Me.CboManagerment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboManagerment.FormattingEnabled = True
         Me.CboManagerment.Items.AddRange(New Object() {"", "Out Patient", "Inpatient ", "Surgery"})
-        Me.CboManagerment.Location = New System.Drawing.Point(93, 67)
+        Me.CboManagerment.Location = New System.Drawing.Point(100, 69)
         Me.CboManagerment.Name = "CboManagerment"
         Me.CboManagerment.Size = New System.Drawing.Size(133, 28)
         Me.CboManagerment.TabIndex = 17
@@ -1477,7 +1437,7 @@ Partial Class NewDoctorConsult
         Me.Label32.BackColor = System.Drawing.Color.Transparent
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.ForeColor = System.Drawing.Color.Red
-        Me.Label32.Location = New System.Drawing.Point(644, 32)
+        Me.Label32.Location = New System.Drawing.Point(651, 37)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(16, 20)
         Me.Label32.TabIndex = 15
@@ -1486,23 +1446,23 @@ Partial Class NewDoctorConsult
         'UiTab2
         '
         Me.UiTab2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UiTab2.Location = New System.Drawing.Point(0, 0)
+        Me.UiTab2.Location = New System.Drawing.Point(0, 260)
         Me.UiTab2.Name = "UiTab2"
-        Me.UiTab2.Size = New System.Drawing.Size(2916, 344)
+        Me.UiTab2.Size = New System.Drawing.Size(2847, 543)
         Me.UiTab2.TabIndex = 6
-        Me.UiTab2.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.UiTabPage1, Me.UiTabPage3})
-        Me.UiTab2.VisualStyle = Janus.Windows.UI.Tab.TabVisualStyle.Office2003
+        Me.UiTab2.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.UiTabPage1, Me.UiTabPage2, Me.UiTabPage4, Me.UiTabPage3})
+        Me.UiTab2.VisualStyle = Janus.Windows.UI.Tab.TabVisualStyle.Office2007
         '
         'UiTabPage1
         '
         Me.UiTabPage1.Controls.Add(Me.SplitContainer3)
         Me.UiTabPage1.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage1.Name = "UiTabPage1"
-        Me.UiTabPage1.Size = New System.Drawing.Size(2914, 315)
+        Me.UiTabPage1.Size = New System.Drawing.Size(2845, 514)
         Me.UiTabPage1.StateStyles.FormatStyle.FontSize = 12.0!
         Me.UiTabPage1.StateStyles.FormatStyle.ForeColor = System.Drawing.Color.Red
         Me.UiTabPage1.TabStop = True
-        Me.UiTabPage1.Text = "        Prescription       "
+        Me.UiTabPage1.Text = "     Patient Diagnosis(ICD-10)     "
         '
         'SplitContainer3
         '
@@ -1515,20 +1475,40 @@ Partial Class NewDoctorConsult
         '
         'SplitContainer3.Panel1
         '
+        Me.SplitContainer3.Panel1.AutoScroll = True
+        Me.SplitContainer3.Panel1.Controls.Add(Me.GroupBox3)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.TxtDiagnosisNote)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.ChFollowUp)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.CboEyeDiagnosis)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.GroupFollowup)
         Me.SplitContainer3.Panel1.Controls.Add(Me.GroupBox5)
-        '
-        'SplitContainer3.Panel2
-        '
-        Me.SplitContainer3.Panel2.Controls.Add(Me.ChFollowUp)
-        Me.SplitContainer3.Panel2.Controls.Add(Me.GroupFollowup)
-        Me.SplitContainer3.Size = New System.Drawing.Size(2914, 315)
-        Me.SplitContainer3.SplitterDistance = 1161
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label11)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label38)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.BtnAddSurgery)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.TxtDiagCodeLeftEye)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label32)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.CboDiagLeftEye)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.CboManagerment)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.CboDiagRight)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.CboSurgery)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label33)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.TxtDiagnosisCode)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label29)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.TxtSurgeryCode)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.TxtMedication)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label1)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.BtnAddDiagnosis)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label39)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label37)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label3)
+        Me.SplitContainer3.Panel2Collapsed = True
+        Me.SplitContainer3.Size = New System.Drawing.Size(2845, 514)
+        Me.SplitContainer3.SplitterDistance = 941
         Me.SplitContainer3.TabIndex = 1
         '
         'GroupBox5
         '
         Me.GroupBox5.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox5.Controls.Add(Me.GroupBox3)
         Me.GroupBox5.Controls.Add(Me.BtnRemovePrescription)
         Me.GroupBox5.Controls.Add(Me.BtnDuration)
         Me.GroupBox5.Controls.Add(Me.BtnAddPrescription)
@@ -1547,12 +1527,11 @@ Partial Class NewDoctorConsult
         Me.GroupBox5.Controls.Add(Me.txtdosage)
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Controls.Add(Me.BtnOrdinance)
-        Me.GroupBox5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.ForeColor = System.Drawing.Color.Blue
-        Me.GroupBox5.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox5.Location = New System.Drawing.Point(852, 1)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(1159, 313)
+        Me.GroupBox5.Size = New System.Drawing.Size(412, 208)
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
         '
@@ -1564,9 +1543,9 @@ Partial Class NewDoctorConsult
         Me.GroupBox3.Controls.Add(Me.GridPrescription)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.Blue
-        Me.GroupBox3.Location = New System.Drawing.Point(410, 10)
+        Me.GroupBox3.Location = New System.Drawing.Point(11, 197)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(893, 275)
+        Me.GroupBox3.Size = New System.Drawing.Size(835, 288)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Medicince Usage:"
@@ -1580,15 +1559,16 @@ Partial Class NewDoctorConsult
         Me.GridPrescription.DesignTimeLayout = GridPrescription_DesignTimeLayout
         Me.GridPrescription.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GridPrescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.GridPrescription.GridLineStyle = Janus.Windows.GridEX.GridLineStyle.Solid
         Me.GridPrescription.GroupByBoxVisible = False
         Me.GridPrescription.HeaderFormatStyle.ForeColor = System.Drawing.Color.Blue
         Me.GridPrescription.HeaderFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
         Me.GridPrescription.Location = New System.Drawing.Point(3, 22)
         Me.GridPrescription.Name = "GridPrescription"
         Me.GridPrescription.RecordNavigator = True
-        Me.GridPrescription.Size = New System.Drawing.Size(887, 250)
+        Me.GridPrescription.Size = New System.Drawing.Size(829, 263)
         Me.GridPrescription.TabIndex = 0
-        Me.GridPrescription.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003
+        Me.GridPrescription.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'BtnRemovePrescription
         '
@@ -1597,10 +1577,10 @@ Partial Class NewDoctorConsult
         Me.BtnRemovePrescription.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRemovePrescription.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnRemovePrescription.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRemovePrescription.ForeColor = System.Drawing.Color.Blue
-        Me.BtnRemovePrescription.Location = New System.Drawing.Point(312, 181)
+        Me.BtnRemovePrescription.ForeColor = System.Drawing.Color.Red
+        Me.BtnRemovePrescription.Location = New System.Drawing.Point(312, 177)
         Me.BtnRemovePrescription.Name = "BtnRemovePrescription"
-        Me.BtnRemovePrescription.Size = New System.Drawing.Size(92, 34)
+        Me.BtnRemovePrescription.Size = New System.Drawing.Size(92, 27)
         Me.BtnRemovePrescription.TabIndex = 2
         Me.BtnRemovePrescription.Text = "Remove"
         Me.BtnRemovePrescription.UseVisualStyleBackColor = False
@@ -1627,10 +1607,10 @@ Partial Class NewDoctorConsult
         Me.BtnAddPrescription.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnAddPrescription.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnAddPrescription.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddPrescription.ForeColor = System.Drawing.Color.Blue
-        Me.BtnAddPrescription.Location = New System.Drawing.Point(208, 181)
+        Me.BtnAddPrescription.ForeColor = System.Drawing.Color.Red
+        Me.BtnAddPrescription.Location = New System.Drawing.Point(208, 177)
         Me.BtnAddPrescription.Name = "BtnAddPrescription"
-        Me.BtnAddPrescription.Size = New System.Drawing.Size(92, 34)
+        Me.BtnAddPrescription.Size = New System.Drawing.Size(92, 27)
         Me.BtnAddPrescription.TabIndex = 1
         Me.BtnAddPrescription.Text = "Add To List"
         Me.BtnAddPrescription.UseVisualStyleBackColor = False
@@ -1826,7 +1806,7 @@ Partial Class NewDoctorConsult
         Me.UiTabPage3.Controls.Add(Me.BtnRemoveImage)
         Me.UiTabPage3.Location = New System.Drawing.Point(1, 28)
         Me.UiTabPage3.Name = "UiTabPage3"
-        Me.UiTabPage3.Size = New System.Drawing.Size(3079, 248)
+        Me.UiTabPage3.Size = New System.Drawing.Size(2845, 514)
         Me.UiTabPage3.StateStyles.FormatStyle.FontSize = 12.0!
         Me.UiTabPage3.StateStyles.FormatStyle.ForeColor = System.Drawing.Color.Red
         Me.UiTabPage3.TabStop = True
@@ -1850,31 +1830,18 @@ Partial Class NewDoctorConsult
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.MchLaborate)
-        Me.GroupBox2.Controls.Add(Me.PictureBox1)
-        Me.GroupBox2.Controls.Add(Me.ChLaborat)
         Me.GroupBox2.Controls.Add(Me.GroupBox1)
         Me.GroupBox2.Controls.Add(Me.TxtHistory)
         Me.GroupBox2.Controls.Add(Me.GroupBox4)
-        Me.GroupBox2.Controls.Add(Me.MchLaser)
         Me.GroupBox2.Controls.Add(Me.Label27)
-        Me.GroupBox2.Controls.Add(Me.MChInvestigate)
         Me.GroupBox2.Controls.Add(Me.LblInvestPrice)
         Me.GroupBox2.Controls.Add(Me.LblLaserPrice)
-        Me.GroupBox2.Controls.Add(Me.ChInvestigate)
-        Me.GroupBox2.Controls.Add(Me.ChAddmitted)
-        Me.GroupBox2.Controls.Add(Me.ChLaser)
-        Me.GroupBox2.Controls.Add(Me.CboExamFee)
-        Me.GroupBox2.Controls.Add(Me.ChRefraction)
-        Me.GroupBox2.Controls.Add(Me.ChConsultFree)
-        Me.GroupBox2.Controls.Add(Me.ChIssueGlasses)
-        Me.GroupBox2.Controls.Add(Me.Label30)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Red
         Me.GroupBox2.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(2918, 223)
+        Me.GroupBox2.Size = New System.Drawing.Size(2847, 260)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         '
@@ -1884,9 +1851,9 @@ Partial Class NewDoctorConsult
         Me.MchLaborate.Enabled = False
         Me.MchLaborate.FormattingEnabled = True
         Me.MchLaborate.Items.AddRange(New Object() {"Check 1", "Check 2", "Check 3", "Check 4"})
-        Me.MchLaborate.Location = New System.Drawing.Point(706, 40)
+        Me.MchLaborate.Location = New System.Drawing.Point(556, 39)
         Me.MchLaborate.Name = "MchLaborate"
-        Me.MchLaborate.Size = New System.Drawing.Size(179, 88)
+        Me.MchLaborate.Size = New System.Drawing.Size(179, 379)
         Me.MchLaborate.Sorted = True
         Me.MchLaborate.TabIndex = 43
         '
@@ -1896,7 +1863,7 @@ Partial Class NewDoctorConsult
         Me.ChLaborat.BackColor = System.Drawing.Color.Transparent
         Me.ChLaborat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ChLaborat.ForeColor = System.Drawing.Color.Blue
-        Me.ChLaborat.Location = New System.Drawing.Point(708, 14)
+        Me.ChLaborat.Location = New System.Drawing.Point(595, 11)
         Me.ChLaborat.Name = "ChLaborat"
         Me.ChLaborat.Size = New System.Drawing.Size(104, 24)
         Me.ChLaborat.TabIndex = 42
@@ -1908,7 +1875,7 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.SetAutocompleteMenu(Me.TxtHistory, Nothing)
         Me.TxtHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtHistory.Location = New System.Drawing.Point(13, 149)
+        Me.TxtHistory.Location = New System.Drawing.Point(6, 189)
         Me.TxtHistory.Multiline = True
         Me.TxtHistory.Name = "TxtHistory"
         Me.TxtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -1921,9 +1888,9 @@ Partial Class NewDoctorConsult
         Me.MchLaser.Enabled = False
         Me.MchLaser.FormattingEnabled = True
         Me.MchLaser.Items.AddRange(New Object() {"Check 1", "Check 2", "Check 3", "Check 4"})
-        Me.MchLaser.Location = New System.Drawing.Point(296, 40)
+        Me.MchLaser.Location = New System.Drawing.Point(32, 39)
         Me.MchLaser.Name = "MchLaser"
-        Me.MchLaser.Size = New System.Drawing.Size(179, 88)
+        Me.MchLaser.Size = New System.Drawing.Size(179, 379)
         Me.MchLaser.Sorted = True
         Me.MchLaser.TabIndex = 41
         '
@@ -1933,7 +1900,7 @@ Partial Class NewDoctorConsult
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.Blue
-        Me.Label27.Location = New System.Drawing.Point(9, 126)
+        Me.Label27.Location = New System.Drawing.Point(6, 164)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(136, 20)
         Me.Label27.TabIndex = 29
@@ -1945,9 +1912,9 @@ Partial Class NewDoctorConsult
         Me.MChInvestigate.Enabled = False
         Me.MChInvestigate.FormattingEnabled = True
         Me.MChInvestigate.Items.AddRange(New Object() {"Check 1", "Check 2", "Check 3", "Check 4"})
-        Me.MChInvestigate.Location = New System.Drawing.Point(481, 40)
+        Me.MChInvestigate.Location = New System.Drawing.Point(285, 39)
         Me.MChInvestigate.Name = "MChInvestigate"
-        Me.MChInvestigate.Size = New System.Drawing.Size(218, 88)
+        Me.MChInvestigate.Size = New System.Drawing.Size(179, 379)
         Me.MChInvestigate.Sorted = True
         Me.MChInvestigate.TabIndex = 40
         '
@@ -1977,7 +1944,7 @@ Partial Class NewDoctorConsult
         Me.ChInvestigate.BackColor = System.Drawing.Color.Transparent
         Me.ChInvestigate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ChInvestigate.ForeColor = System.Drawing.Color.Blue
-        Me.ChInvestigate.Location = New System.Drawing.Point(483, 14)
+        Me.ChInvestigate.Location = New System.Drawing.Point(324, 11)
         Me.ChInvestigate.Name = "ChInvestigate"
         Me.ChInvestigate.Size = New System.Drawing.Size(110, 24)
         Me.ChInvestigate.TabIndex = 36
@@ -1990,7 +1957,7 @@ Partial Class NewDoctorConsult
         Me.ChAddmitted.BackColor = System.Drawing.Color.Transparent
         Me.ChAddmitted.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ChAddmitted.ForeColor = System.Drawing.Color.Blue
-        Me.ChAddmitted.Location = New System.Drawing.Point(204, 54)
+        Me.ChAddmitted.Location = New System.Drawing.Point(836, 79)
         Me.ChAddmitted.Name = "ChAddmitted"
         Me.ChAddmitted.Size = New System.Drawing.Size(192, 24)
         Me.ChAddmitted.TabIndex = 17
@@ -2004,7 +1971,7 @@ Partial Class NewDoctorConsult
         Me.ChLaser.BackColor = System.Drawing.Color.Transparent
         Me.ChLaser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ChLaser.ForeColor = System.Drawing.Color.Blue
-        Me.ChLaser.Location = New System.Drawing.Point(300, 14)
+        Me.ChLaser.Location = New System.Drawing.Point(73, 11)
         Me.ChLaser.Name = "ChLaser"
         Me.ChLaser.Size = New System.Drawing.Size(68, 24)
         Me.ChLaser.TabIndex = 16
@@ -2018,9 +1985,9 @@ Partial Class NewDoctorConsult
         Me.CboExamFee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboExamFee.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboExamFee.FormattingEnabled = True
-        Me.CboExamFee.Location = New System.Drawing.Point(101, 15)
+        Me.CboExamFee.Location = New System.Drawing.Point(765, 29)
         Me.CboExamFee.Name = "CboExamFee"
-        Me.CboExamFee.Size = New System.Drawing.Size(191, 28)
+        Me.CboExamFee.Size = New System.Drawing.Size(263, 28)
         Me.CboExamFee.TabIndex = 3
         '
         'ChRefraction
@@ -2029,7 +1996,7 @@ Partial Class NewDoctorConsult
         Me.ChRefraction.BackColor = System.Drawing.Color.Transparent
         Me.ChRefraction.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ChRefraction.ForeColor = System.Drawing.Color.Blue
-        Me.ChRefraction.Location = New System.Drawing.Point(13, 67)
+        Me.ChRefraction.Location = New System.Drawing.Point(677, 79)
         Me.ChRefraction.Name = "ChRefraction"
         Me.ChRefraction.Size = New System.Drawing.Size(102, 24)
         Me.ChRefraction.TabIndex = 15
@@ -2041,7 +2008,7 @@ Partial Class NewDoctorConsult
         Me.ChConsultFree.AutoSize = True
         Me.ChConsultFree.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChConsultFree.ForeColor = System.Drawing.Color.Red
-        Me.ChConsultFree.Location = New System.Drawing.Point(13, 96)
+        Me.ChConsultFree.Location = New System.Drawing.Point(836, 75)
         Me.ChConsultFree.Name = "ChConsultFree"
         Me.ChConsultFree.Size = New System.Drawing.Size(154, 24)
         Me.ChConsultFree.TabIndex = 0
@@ -2053,7 +2020,7 @@ Partial Class NewDoctorConsult
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.Red
-        Me.Label30.Location = New System.Drawing.Point(7, 23)
+        Me.Label30.Location = New System.Drawing.Point(671, 37)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(94, 20)
         Me.Label30.TabIndex = 34
@@ -2067,7 +2034,7 @@ Partial Class NewDoctorConsult
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator2, Me.BtnNewReferral, Me.ToolStripSeparator3, Me.BtnCertificate, Me.ToolStripSeparator5, Me.BtnViewHistory, Me.ToolStripSeparator4, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1160, 53)
+        Me.ToolStrip1.Size = New System.Drawing.Size(2849, 53)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -2165,7 +2132,7 @@ Partial Class NewDoctorConsult
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.AxAcroPDF1)
         Me.SplitContainer1.Panel2Collapsed = True
-        Me.SplitContainer1.Size = New System.Drawing.Size(1160, 805)
+        Me.SplitContainer1.Size = New System.Drawing.Size(2849, 805)
         Me.SplitContainer1.SplitterDistance = 903
         Me.SplitContainer1.TabIndex = 2
         '
@@ -2201,7 +2168,7 @@ Partial Class NewDoctorConsult
         Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
         Me.RibbonStatusBar1.Office2007CustomColor = System.Drawing.Color.Empty
         Me.RibbonStatusBar1.ShowToolTips = False
-        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1160, 23)
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(2849, 23)
         '
         '
         '
@@ -2240,12 +2207,39 @@ Partial Class NewDoctorConsult
         Me.AutoDiagnosis.TargetControlWrapper = Nothing
         Me.AutoDiagnosis.ToolTipDuration = 3000
         '
+        'UiTabPage2
+        '
+        Me.UiTabPage2.Controls.Add(Me.GroupSurgery)
+        Me.UiTabPage2.Location = New System.Drawing.Point(1, 28)
+        Me.UiTabPage2.Name = "UiTabPage2"
+        Me.UiTabPage2.Size = New System.Drawing.Size(2845, 514)
+        Me.UiTabPage2.StateStyles.FormatStyle.FontSize = 12.0!
+        Me.UiTabPage2.StateStyles.FormatStyle.ForeColor = System.Drawing.Color.Red
+        Me.UiTabPage2.TabStop = True
+        Me.UiTabPage2.Text = "       Surgery     "
+        '
+        'UiTabPage4
+        '
+        Me.UiTabPage4.Controls.Add(Me.MchLaborate)
+        Me.UiTabPage4.Controls.Add(Me.ChLaser)
+        Me.UiTabPage4.Controls.Add(Me.MchLaser)
+        Me.UiTabPage4.Controls.Add(Me.ChLaborat)
+        Me.UiTabPage4.Controls.Add(Me.ChInvestigate)
+        Me.UiTabPage4.Controls.Add(Me.MChInvestigate)
+        Me.UiTabPage4.Location = New System.Drawing.Point(1, 28)
+        Me.UiTabPage4.Name = "UiTabPage4"
+        Me.UiTabPage4.Size = New System.Drawing.Size(2845, 514)
+        Me.UiTabPage4.StateStyles.FormatStyle.FontSize = 12.0!
+        Me.UiTabPage4.StateStyles.FormatStyle.ForeColor = System.Drawing.Color.Red
+        Me.UiTabPage4.TabStop = True
+        Me.UiTabPage4.Text = "   Another Service    "
+        '
         'NewDoctorConsult
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1160, 881)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(2849, 881)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.RibbonStatusBar1)
@@ -2265,18 +2259,13 @@ Partial Class NewDoctorConsult
         CType(Me.ErrConsult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.SplitContainer2.Panel1.ResumeLayout(False)
-        Me.SplitContainer2.Panel1.PerformLayout()
-        Me.SplitContainer2.Panel2.ResumeLayout(False)
-        Me.SplitContainer2.ResumeLayout(False)
         Me.GroupSurgery.ResumeLayout(False)
         Me.GroupSurgery.PerformLayout()
         CType(Me.UiTab2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiTab2.ResumeLayout(False)
         Me.UiTabPage1.ResumeLayout(False)
         Me.SplitContainer3.Panel1.ResumeLayout(False)
-        Me.SplitContainer3.Panel2.ResumeLayout(False)
-        Me.SplitContainer3.Panel2.PerformLayout()
+        Me.SplitContainer3.Panel1.PerformLayout()
         Me.SplitContainer3.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
@@ -2293,6 +2282,9 @@ Partial Class NewDoctorConsult
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicLoadReport, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UiTabPage2.ResumeLayout(False)
+        Me.UiTabPage4.ResumeLayout(False)
+        Me.UiTabPage4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2354,7 +2346,6 @@ Partial Class NewDoctorConsult
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents ErrConsult As System.Windows.Forms.ErrorProvider
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents TxtHistory As System.Windows.Forms.TextBox
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents CboSurgery As System.Windows.Forms.ComboBox
@@ -2420,7 +2411,6 @@ Partial Class NewDoctorConsult
     Friend WithEvents BtnNewReferral As System.Windows.Forms.ToolStripButton
     Friend WithEvents TxtIOPLE As System.Windows.Forms.TextBox
     Friend WithEvents TxtIOPRE As System.Windows.Forms.TextBox
-    Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
     Friend WithEvents SplitContainer3 As System.Windows.Forms.SplitContainer
     Friend WithEvents GroupSurgery As System.Windows.Forms.GroupBox
     Friend WithEvents CboAnesthetist As System.Windows.Forms.ComboBox
@@ -2461,4 +2451,7 @@ Partial Class NewDoctorConsult
     Friend WithEvents Label38 As System.Windows.Forms.Label
     Friend WithEvents CboEyeDiagnosis As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents UiTabPage2 As Janus.Windows.UI.Tab.UITabPage
+    Friend WithEvents UiTabPage4 As Janus.Windows.UI.Tab.UITabPage
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class
